@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Header = (props: any) => {
     const router = useRouter();
@@ -20,7 +21,7 @@ const Header = (props: any) => {
             <div className="container">
                 <div className="flex items-center justify-between py-5 lg:py-0">
                     <Link href="/">
-                        <img src="/assets/images/logo.png" alt="bretta etc ltd logo" className="h-10 w-full" />
+                        <Image src="/assets/images/mugshot.svg" alt="bretta etc ltd logo" width={60} height={60} />
                     </Link>
                     <div className="flex items-center">
                         <div onClick={() => toggleMenu()} className={`overlay fixed inset-0 z-[51] bg-black/60 lg:hidden ${showMenu ? '' : 'hidden'}`}></div>

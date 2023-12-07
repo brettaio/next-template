@@ -51,7 +51,9 @@ const Index = () => {
                                 data-aos-delay="200"
                             >
                                 <div className="relative h-full">
-                                    <Image src="/assets/images/mugshot.svg" alt="home-banner-icon" className="mx-auto" width={500} height={500} />
+                                    <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                        <Image src="/assets/images/mugshot.svg" alt="home-banner-icon" className="mx-auto" width={500} height={500} />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -447,7 +449,7 @@ const Index = () => {
                                 </div>
                             </div>
                             <div className="top-1/2 right-5 mx-auto mt-10 md:w-[45%] lg:mt-0 xl:absolute xl:-translate-y-1/2">
-                                <Image src="/assets/images/box-img.png" fill={true} alt="box-img" className="w-full" />
+                                <Image src="/assets/images/box-img.png" height={512} width={512} alt="box-img" className="w-full" />
                             </div>
                         </div>
                     </div>
@@ -510,7 +512,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'web' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-1.png" fill={true} alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-1.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-1"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Space Landing page</h6>
                                     <p>Website</p>
@@ -520,7 +528,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-2.png" fill={true} alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-2.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-2"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Crypto Game - UX Interface</h6>
                                     <p>Website, App</p>
@@ -530,7 +544,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-3.png" fill={true} alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-3.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-3"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Looking for a quiet place</h6>
                                     <p>Website</p>
@@ -540,7 +560,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-4.png" fill={true} alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-4.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-4"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">WeTour - Travel Hero Illustration</h6>
                                     <p>Website</p>
@@ -550,7 +576,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-5.png" fill={true} alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-5.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-5"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Digital Art Guide</h6>
                                     <p>Branding</p>
@@ -560,7 +592,13 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image src="/assets/images/project-6.png" fill={true} alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image
+                                    src="/assets/images/project-6.png"
+                                    height={256}
+                                    width={256}
+                                    alt="project-6"
+                                    className="h-52 w-full rounded-t-3xl object-cover"
+                                />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Frozeverse - 3D and motion design</h6>
                                     <p>Branding, Website, App</p>
@@ -573,57 +611,65 @@ const Index = () => {
             <section className="bg-[url(/assets/images/team-bg.png)] bg-cover bg-center bg-no-repeat py-14  lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
-                        <h6>Meet Our Team</h6>
-                        <h4>Creative Minds</h4>
+                        <h6>Meet The Bretta Lads</h6>
+                        <h4>All these cheeky fellas!</h4>
                     </div>
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         <div className="group cursor-pointer text-center">
-                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <Image
-                                    src="/assets/images/team-member-1.png"
-                                    fill={true}
-                                    alt="team-member-1"
-                                    className="h-full w-full rounded-3xl object-cover object-top"
-                                />
-                            </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Aditya Patel</h4>
-                            <h6 className="text-sm font-bold">Chief Executive Officer</h6>
+                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <Image
+                                        src="/assets/images/brettacuz.png"
+                                        fill={true}
+                                        alt="team-member-1"
+                                        className="h-full w-full rounded-3xl object-cover object-top"
+                                    />
+                                </div>
+                                <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Bretta</h4>
+                                <h6 className="text-sm font-bold">Chief Executive Officer</h6>
+                            </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <Image
-                                    src="/assets/images/team-member-2.png"
-                                    fill={true}
-                                    alt="team-member-2"
-                                    className="h-full w-full rounded-3xl object-cover object-top"
-                                />
-                            </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Audrey Ramirez</h4>
-                            <h6 className="text-sm font-bold">Chief Operating Officer</h6>
+                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <Image
+                                        src="/assets/images/brettacuz.png"
+                                        fill={true}
+                                        alt="team-member-2"
+                                        className="h-full w-full rounded-3xl object-cover object-top"
+                                    />
+                                </div>
+                                <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Bretta</h4>
+                                <h6 className="text-sm font-bold">Chief Operating Officer</h6>
+                            </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <Image
-                                    src="/assets/images/team-member-3.png"
-                                    fill={true}
-                                    alt="team-member-3"
-                                    className="h-full w-full rounded-3xl object-cover object-top"
-                                />
-                            </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">James Robinson</h4>
-                            <h6 className="text-sm font-bold">Chief Financial Officer</h6>
+                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <Image
+                                        src="/assets/images/brettacuz.png"
+                                        fill={true}
+                                        alt="team-member-3"
+                                        className="h-full w-full rounded-3xl object-cover object-top"
+                                    />
+                                </div>
+                                <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Bretta</h4>
+                                <h6 className="text-sm font-bold">Chief Financial Officer</h6>
+                            </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <Image
-                                    src="/assets/images/team-member-4.png"
-                                    fill={true}
-                                    alt="team-member-4"
-                                    className="h-full w-full rounded-3xl object-cover object-top"
-                                />
-                            </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Daniel Allen</h4>
-                            <h6 className="text-sm font-bold">Chief Marketing Officer</h6>
+                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <Image
+                                        src="/assets/images/brettacuz.png"
+                                        fill={true}
+                                        alt="team-member-4"
+                                        className="h-full w-full rounded-3xl object-cover object-top"
+                                    />
+                                </div>
+                                <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Bretta</h4>
+                                <h6 className="text-sm font-bold">Chief Marketing Officer</h6>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -1041,8 +1087,9 @@ const Index = () => {
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
                             <Image
                                 src="/assets/images/form-img.png"
-                                fill={true}
                                 alt="form-image"
+                                height={512}
+                                width={512}
                                 className="mx-auto"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"

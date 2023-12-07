@@ -3,12 +3,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
+import Image from 'next/image';
 
 const OfficeSwiper = () => {
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
-
     return (
         <section className="bg-gradient-to-t from-white/[54%] to-transparent py-14 dark:bg-none lg:py-[100px]">
             <div className="container">
@@ -18,10 +15,7 @@ const OfficeSwiper = () => {
                         <h4>Come to visit our offices throughout the globe</h4>
                     </div>
                     <div className="flex items-center justify-end gap-4">
-                        <Link
-                            href="#"
-                            className="text-sm font-extrabold text-black transition hover:text-secondary dark:text-white dark:hover:text-secondary"
-                        >
+                        <Link href="#" className="text-sm font-extrabold text-black transition hover:text-secondary dark:text-white dark:hover:text-secondary">
                             View All
                         </Link>
                         <button
@@ -78,12 +72,10 @@ const OfficeSwiper = () => {
                                 nextEl: '.ofc-slider-button-next',
                                 prevEl: '.ofc-slider-button-prev',
                             }}
-                            dir={isRtl ? 'rtl' : 'ltr'}
-                            key={isRtl ? 'true' : 'false'}
                         >
                             <SwiperSlide>
                                 <div className="mt-10 rounded-[32px] bg-white dark:bg-gray-dark md:grid md:grid-cols-2 lg:mt-0">
-                                    <img
+                                    <Image
                                         src="/assets/images/ofc.png"
                                         alt="ofc"
                                         className="h-full w-full rounded-r-[32px] rounded-l-[32px] object-cover md:rounded-r-none"
@@ -153,7 +145,7 @@ const OfficeSwiper = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="mt-10 rounded-[32px] bg-white dark:bg-gray-dark md:grid md:grid-cols-2 lg:mt-0">
-                                    <img
+                                    <Image
                                         src="/assets/images/ofc.png"
                                         alt="ofc"
                                         className="h-full w-full rounded-r-[32px] rounded-l-[32px] object-cover md:rounded-r-none"

@@ -1,10 +1,10 @@
+/* eslint-disable max-len */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
+import Image from 'next/image';
 
 const Testimonial = ({
     showTitle = true,
@@ -21,8 +21,6 @@ const Testimonial = ({
     ],
     className = '',
 }) => {
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
-
     return (
         <section className={`relative bg-black py-14 dark:bg-transparent lg:py-[100px] ${className}`}>
             {type.toLowerCase() === 'marketing' ? (
@@ -39,8 +37,6 @@ const Testimonial = ({
                         prevEl: '.swiper-button-prev2',
                     }}
                     modules={[Navigation, Autoplay]}
-                    dir={isRtl ? 'rtl' : 'ltr'}
-                    key={isRtl ? 'true' : 'false'}
                 >
                     {feedbacks.map((feedback: any) => {
                         return (
@@ -48,10 +44,10 @@ const Testimonial = ({
                                 <div className="flex flex-col items-center gap-7 pb-3 sm:pb-[70px] lg:flex-row xl:gap-12">
                                     <div className="relative pl-10 pt-[30px] rtl:rotate-y-180">
                                         <span className="absolute top-0 left-0">
-                                            <img src="/assets/images/testimonial-shadow.svg" alt="" />
+                                            <Image src="/assets/images/testimonial-shadow.svg" alt="" />
                                         </span>
                                         <div className="w-full max-w-[347px] overflow-hidden rounded-b-3xl rounded-tl-[200px]">
-                                            <img src={feedback.thumbnail} alt="" />
+                                            <Image src={feedback.thumbnail} alt="" />
                                         </div>
                                         <span className="absolute -bottom-5 -right-5">
                                             <svg width="42" height="47" viewBox="0 0 42 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +66,7 @@ const Testimonial = ({
                                             </svg>
                                         </span>
                                         <span className="absolute top-0 -right-6 hidden md:block">
-                                            <img src="/assets/images/blue-quote.png" alt="blue-quote" className="" />
+                                            <Image src="/assets/images/blue-quote.png" alt="blue-quote" className="" width={48} height={48} />
                                         </span>
                                     </div>
                                     <div className="w-full max-w-[570px] lg:mt-[150px]">
@@ -331,8 +327,6 @@ const Testimonial = ({
                                         nextEl: '.testimonial-button-next',
                                         prevEl: '.testimonial-button-prev',
                                     }}
-                                    dir={isRtl ? 'rtl' : 'ltr'}
-                                    key={isRtl ? 'true' : 'false'}
                                 >
                                     {type.toLowerCase() === 'common' &&
                                         feedbacks.map((feedback: any) => {
@@ -341,9 +335,11 @@ const Testimonial = ({
                                                     <div className="items-center gap-4 sm:grid sm:grid-cols-3">
                                                         <div className="col-span-2">
                                                             <div className="relative rounded-3xl bg-white/[0.02] p-6">
-                                                                <img
+                                                                <Image
                                                                     src="/assets/images/blue-quote.png"
                                                                     alt="blue-quote"
+                                                                    width={48}
+                                                                    height={48}
                                                                     className="absolute top-0 ltr:right-0 rtl:left-0 sm:-top-6 ltr:sm:-right-6 rtl:sm:-left-6"
                                                                 />
                                                                 <div className="pb-8">
@@ -406,7 +402,13 @@ const Testimonial = ({
                                                             </div>
                                                         </div>
                                                         <div className="mx-auto mt-4 h-20 w-20 max-w-[255px] overflow-hidden rounded-full bg-white ltr:ml-auto rtl:mr-auto dark:bg-gray-dark sm:mt-0 sm:h-auto sm:w-auto sm:rounded-[150px] ltr:sm:mr-0 rtl:sm:ml-0">
-                                                            <img src={feedback.thumbnail} alt="testimonial" className="h-full w-full object-cover object-top" />
+                                                            <Image
+                                                                src={feedback.thumbnail}
+                                                                alt="testimonial"
+                                                                width={256}
+                                                                height={256}
+                                                                className="h-full w-full object-cover object-top"
+                                                            />
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -463,9 +465,11 @@ const Testimonial = ({
                                                             </div>
                                                         </div>
                                                         <div className="mx-auto w-40 flex-1 md:mx-0 md:w-full md:max-w-sm">
-                                                            <img
+                                                            <Image
                                                                 src={feedback.thumbnail}
                                                                 alt="testimonial"
+                                                                width={256}
+                                                                height={256}
                                                                 className="h-full w-full rounded-[30px] object-cover"
                                                             />
                                                         </div>
