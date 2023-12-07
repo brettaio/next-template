@@ -1,40 +1,58 @@
+/* eslint-disable max-len */
 import Testimonial from '../components/Testimonial';
 import { useState } from 'react';
 import CounterComponent from '../components/CounterComponent';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Index = () => {
     const [activeTab, setActiveTab] = useState<string>('all');
+
+    const heroFirstSentence = `This cheeky fella here...`;
+    const heroSecondSentence = `Maximizes Google Ad Accounts.`;
+    const heroThirdSentence = `With Expert Management & Strategy`;
+    const heroForthSentence = `Website Optimization & Updates `;
+
+    const serviceH6 = `Can I Tell You How Bretta Brings The Holistic Approach To The Game?`;
+    const serviceH4 = `Here's a basic breakdown`;
+
+    const why1 = `I can build ads, but I'm better at running ads. As an educator, I'm fluid in understanding and conceptualising other peoples problems. I can then take that and blue sky dream and conceptualise with you. We can strategize solutions based on your industry and goals. Ongoing Google Ads Management is my bread and butter. Let's make sandwiches.`;
+    const why2 = ` I quit the corporate marketing game to go rogue and code (and raise kids), but big dogs hungry! I've been bouncing around languauges and command lines as a creative starving artist building projects that have given me an extreme attention to detail, and nouse to scaling ideas. One becomes two becomes four. I also did this to acccompany the idea - speed is key.`;
+    const why3 = `I'm content in content. I have design, UX UI and content writing background, I also have that primary teaching degree to aid in my story telling. I also have this sick as digital friend called Alan Iverson - Well I call him AI for short. I cover the entire spectrum of digital marketing and branding to fill in the gaps that are needed. Fresh content. Fast Content.`;
+    const why4 = `I take pride in the friends I've made and the true ones that I stay in constant connect with. Shopify experts, UXUI Gurus, Fullstack Devs, Entreprenuers, Cyber Security Leaders. All these people enrich my life with goodness and they're always one call away. I appreciate them dearly for the opportunites they have provided in my journey. You know who you are. Thank you!`;
 
     return (
         <div className="overflow-x-hidden">
             <div className="overflow-hidden bg-black pt-[82px] sm:-mx-[250px] sm:rounded-b-[50%] lg:-mx-[150px] lg:pt-[106px]">
                 <div className="container">
                     <div className="relative bg-[url(/assets/images/world-map.png)] bg-cover bg-top bg-no-repeat pt-14 pb-0 lg:pt-20 lg:pb-60 xl:pt-36">
-                        <div className="relative z-[1] flex flex-col lg:flex-row lg:text-left xl:w-full">
-                            <div className="flex flex-col items-center lg:w-1/2 lg:pr-8">
+                        <div className="flex flex-col lg:flex-row lg:justify-center lg:text-center xl:w-full">
+                            <div className="flex w-auto flex-col items-center lg:justify-center">
                                 {/* Content for the left div */}
                                 <h2 className="text-center text-4xl font-extrabold text-white sm:text-5xl lg:text-[70px] lg:leading-[90px] ">
                                     Bretta <span className="mt-6 italic text-primary">Gets </span>
                                     <span className="italic text-secondary">Results Online</span>
                                 </h2>
-                                <p className="mt-8 mb-8 text-start text-xl text-white lg:w-[90%]">This cheeky fella here...</p>
-                                <p className="mb-8 text-center text-xl text-white lg:w-[90%] ">Maximizes Google Ad Accounts.</p>
-                                <p className="mb-8 text-end text-xl text-white lg:w-[90%]">With Expert Management & Strategy.</p>
-                                <div className=" lg:self-end">
-                                    <Link href="/about-us" className="btn block bg-white">
+                                <p className="mt-8 mb-8 text-center text-xl text-white lg:w-[100%]">{heroFirstSentence}</p>
+                                <p className="mb-8 text-center text-xl text-white lg:w-[100%]">{heroSecondSentence}</p>
+                                <p className="mb-8 text-center text-xl text-white lg:w-[100%]">{heroThirdSentence}</p>
+                                <p className="mb-8 text-center text-xl text-white lg:w-[100%]">{heroForthSentence}</p>
+                                <div className="text-center">
+                                    <Link href="tel:+15195214260" className="btn block bg-white">
                                         How Does He Do It?
                                     </Link>
                                 </div>
                             </div>
                             <div
-                                className="mx-auto mb-16 w-auto md:w-[auto] lg:w-1/2 xl:h-[auto] xl:w-[auto]"
+                                className="mx-auto mb-16 w-full lg:w-1/2 xl:w-full"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
                                 data-aos-offset="0"
                                 data-aos-delay="200"
                             >
-                                <img src="/assets/images/mugshot.svg" alt="home-banner-icon" />
+                                <div className="relative h-full">
+                                    <Image src="/assets/images/mugshot.svg" alt="home-banner-icon" className="mx-auto" width={500} height={500} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -44,10 +62,10 @@ const Index = () => {
             <section className="bg-[url(/assets/images/service-bg.png)] bg-cover bg-center bg-no-repeat py-14 lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
-                        <h6>Bretta Brings The Holistic Approach To The Game</h6>
-                        <h4>Here Is How I Do It</h4>
+                        <h6>{serviceH6}</h6>
+                        <h4>{serviceH4}</h4>
                     </div>
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <div
                                 className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 "
@@ -74,11 +92,9 @@ const Index = () => {
                                     </svg>
                                 </div>
                                 <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR" className="my-8 inline-block text-[22px] font-extrabold text-black ">
-                                    Google Ads Management
+                                    Weekly Google Ads Management
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
-                                    We provide services with the best designs than our designer team for your business.
-                                </p>
+                                <p className="line-clamp-7 mb-10 text-lg font-semibold transition ">{why1}</p>
                                 <Link
                                     href="/services-detail"
                                     className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black"
@@ -127,9 +143,7 @@ const Index = () => {
                                 <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     Web Development
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
-                                    We help develop company websites to be more professional and attractive
-                                </p>
+                                <p className="line-clamp-7 mb-10 text-lg font-semibold transition ">{why2}</p>
                                 <Link
                                     href="/services-detail"
                                     className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black"
@@ -178,9 +192,56 @@ const Index = () => {
                                 <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     Digital Marketing
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
-                                    We also help you market your products through an online marketplace.
-                                </p>
+                                <p className="line-clamp-7 mb-10 text-lg font-semibold transition ">{why3}</p>
+                                <Link
+                                    href="/services-detail"
+                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black "
+                                >
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 20 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="text-black transition group-hover:text-white "
+                                    >
+                                        <path
+                                            d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000">
+                            <div
+                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 "
+                                style={{
+                                    boxShadow: '-20px 30px 70px rgba(219, 222, 225, 0.4)',
+                                }}
+                            >
+                                <div
+                                    className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-black"
+                                    style={{
+                                        boxShadow: '0px 15px 30px rgba(180, 118, 229, 0.4)',
+                                    }}
+                                >
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            opacity="0.5"
+                                            d="M6.21053 20H3.05263C2.77346 20 2.50572 19.8891 2.30831 19.6917C2.1109 19.4943 2 19.2265 2 18.9474V10.5263C2 10.2471 2.1109 9.97941 2.30831 9.782C2.50572 9.58459 2.77346 9.47369 3.05263 9.47369H6.21053C6.4897 9.47369 6.75744 9.58459 6.95485 9.782C7.15226 9.97941 7.26316 10.2471 7.26316 10.5263V18.9474C7.26316 19.2265 7.15226 19.4943 6.95485 19.6917C6.75744 19.8891 6.4897 20 6.21053 20ZM20.9474 20H17.7895C17.5103 20 17.2426 19.8891 17.0452 19.6917C16.8477 19.4943 16.7368 19.2265 16.7368 18.9474V7.36843C16.7368 7.08925 16.8477 6.82151 17.0452 6.6241C17.2426 6.4267 17.5103 6.3158 17.7895 6.3158H20.9474C21.2265 6.3158 21.4943 6.4267 21.6917 6.6241C21.8891 6.82151 22 7.08925 22 7.36843V18.9474C22 19.2265 21.8891 19.4943 21.6917 19.6917C21.4943 19.8891 21.2265 20 20.9474 20Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            d="M13.5789 20H10.421C10.1419 20 9.87412 19.8891 9.67672 19.6917C9.47931 19.4943 9.36841 19.2265 9.36841 18.9474V1.05263C9.36841 0.773456 9.47931 0.505715 9.67672 0.308309C9.87412 0.110902 10.1419 0 10.421 0H13.5789C13.8581 0 14.1259 0.110902 14.3233 0.308309C14.5207 0.505715 14.6316 0.773456 14.6316 1.05263V18.9474C14.6316 19.2265 14.5207 19.4943 14.3233 19.6917C14.1259 19.8891 13.8581 20 13.5789 20Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </div>
+                                <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
+                                    Professional Network
+                                </Link>
+                                <p className="line-clamp-7 mb-10 text-lg font-semibold transition ">{why4}</p>
                                 <Link
                                     href="/services-detail"
                                     className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black "
@@ -210,7 +271,7 @@ const Index = () => {
                     background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 54.69%)',
                 }}
             >
-                <CounterComponent title="Company Facts" />
+                <CounterComponent title="Here are some animations to show my experience" subtitle="A few psuedo made up statistical breakdowns" />
                 <div className="relative my-14 mx-auto border-[10px] border-transparent bg-black py-14  lg:my-[100px] lg:py-[100px] xl:max-w-[1440px] xl:rounded-3xl">
                     <div className="container">
                         <div className="items-end gap-4 lg:flex xl:gap-0">
@@ -386,7 +447,7 @@ const Index = () => {
                                 </div>
                             </div>
                             <div className="top-1/2 right-5 mx-auto mt-10 md:w-[45%] lg:mt-0 xl:absolute xl:-translate-y-1/2">
-                                <img src="/assets/images/box-img.png" alt="box-img" className="w-full" />
+                                <Image src="/assets/images/box-img.png" fill={true} alt="box-img" className="w-full" />
                             </div>
                         </div>
                     </div>
@@ -449,7 +510,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'web' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-1.png" alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-1.png" fill={true} alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Space Landing page</h6>
                                     <p>Website</p>
@@ -459,7 +520,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-2.png" alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-2.png" fill={true} alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Crypto Game - UX Interface</h6>
                                     <p>Website, App</p>
@@ -469,7 +530,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-3.png" alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-3.png" fill={true} alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Looking for a quiet place</h6>
                                     <p>Website</p>
@@ -479,7 +540,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-4.png" alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-4.png" fill={true} alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">WeTour - Travel Hero Illustration</h6>
                                     <p>Website</p>
@@ -489,7 +550,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-5.png" alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-5.png" fill={true} alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Digital Art Guide</h6>
                                     <p>Branding</p>
@@ -499,7 +560,7 @@ const Index = () => {
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <img src="/assets/images/project-6.png" alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
+                                <Image src="/assets/images/project-6.png" fill={true} alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
                                     <h6 className="mb-1 text-black ">Frozeverse - 3D and motion design</h6>
                                     <p>Branding, Website, App</p>
@@ -518,28 +579,48 @@ const Index = () => {
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-1.png" alt="team-member-1" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image
+                                    src="/assets/images/team-member-1.png"
+                                    fill={true}
+                                    alt="team-member-1"
+                                    className="h-full w-full rounded-3xl object-cover object-top"
+                                />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Aditya Patel</h4>
                             <h6 className="text-sm font-bold">Chief Executive Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-2.png" alt="team-member-2" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image
+                                    src="/assets/images/team-member-2.png"
+                                    fill={true}
+                                    alt="team-member-2"
+                                    className="h-full w-full rounded-3xl object-cover object-top"
+                                />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Audrey Ramirez</h4>
                             <h6 className="text-sm font-bold">Chief Operating Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-3.png" alt="team-member-3" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image
+                                    src="/assets/images/team-member-3.png"
+                                    fill={true}
+                                    alt="team-member-3"
+                                    className="h-full w-full rounded-3xl object-cover object-top"
+                                />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">James Robinson</h4>
                             <h6 className="text-sm font-bold">Chief Financial Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-4.png" alt="team-member-4" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image
+                                    src="/assets/images/team-member-4.png"
+                                    fill={true}
+                                    alt="team-member-4"
+                                    className="h-full w-full rounded-3xl object-cover object-top"
+                                />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Daniel Allen</h4>
                             <h6 className="text-sm font-bold">Chief Marketing Officer</h6>
@@ -958,7 +1039,14 @@ const Index = () => {
                         <div className="heading text-center lg:mb-0 lg:w-1/3 lg:pr-10 lg:text-left">
                             <h6>Get In Touch.</h6>
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
-                            <img src="/assets/images/form-img.png" alt="form-image" className="mx-auto" data-aos="fade-right" data-aos-duration="1000" />
+                            <Image
+                                src="/assets/images/form-img.png"
+                                fill={true}
+                                alt="form-image"
+                                className="mx-auto"
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
+                            />
                         </div>
                         <form action="" className="rounded-3xl bg-white px-4 py-12 lg:w-2/3 lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">

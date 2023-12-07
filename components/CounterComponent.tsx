@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import CountUp from 'react-countup';
 
 const CounterComponent = (props: any) => {
@@ -5,7 +6,7 @@ const CounterComponent = (props: any) => {
         <div className="container">
             <div className="heading text-center">
                 <h6>{props.title}</h6>
-                <h4>Here is a few statistical breakdowns of my history</h4>
+                <h4>{props.subtitle}</h4>
             </div>
             <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-4">
                 <div data-aos="fade-up" data-aos-duration="1000">

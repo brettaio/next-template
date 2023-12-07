@@ -1,12 +1,15 @@
-import { useSelector } from 'react-redux';
+/* eslint-disable max-len */
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import CounterComponent from '../components/CounterComponent';
 import Testimonial from '../components/Testimonial';
 import BlogSlider from '../components/BlogSlider';
-import { IRootState } from '../store';
 
 const Aboutus = () => {
+    const paragraphContent =
+        'Back In The Day, I Played Footy. It Was Easier To Shout Brett-a Than Brett! Simple. Effective. It Stuck. Much Like My Advertising Prowess. ZING!';
+    const subHeading = `Well simple. Here's a story for you.`;
     return (
         <div>
             <Head>
@@ -18,7 +21,7 @@ const Aboutus = () => {
                         <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
                             <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right">
                                 <h6>So Whats the Goss With Bretta Etc.</h6>
-                                <h4 className="!text-white">Well simple - here's a story for you. </h4>
+                                <h4 className="!text-white">{subHeading}</h4>
                             </div>
                             <div className="relative mt-6 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
                                 <svg
@@ -627,12 +630,7 @@ const Aboutus = () => {
                     <div className="mb-8 text-center lg:w-1/2 lg:text-left">
                         <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right xl:w-[95%]">
                             <h6>This is bretta.io and I am Bretta of Bretta Etc.</h6>
-                            <h4>
-                                Back In The Day, I Played Footy.<br></br>
-                                <br></br>It Was Easier To Shout Brett-a Than Brett!<br></br>
-                                <br></br> Simple. Effective. It Stuck. <br></br>
-                                <br></br>Much Like My Advertising Prowess. ZING!
-                            </h4>
+                            <h4>{paragraphContent}</h4>
                         </div>
                         <p className="pb-10 text-lg font-semibold leading-[30px]">
                             So to speed this up, I went to school, got a teaching degree, didn't really teach long, backpacked the US, came home, moved to
@@ -649,7 +647,7 @@ const Aboutus = () => {
                     </div>
                 </div>
                 <div className="bottom-0 right-0 lg:absolute" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="/assets/images/yeahyeah.svg" alt="About" />
+                    <Image src="/assets/images/yeahyeah.svg" alt="About" />
                 </div>
             </section>
 
@@ -780,7 +778,7 @@ const Aboutus = () => {
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-1.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image src="/assets/images/team-member-1.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
                                 Aditya Patel
@@ -789,7 +787,7 @@ const Aboutus = () => {
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-2.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image src="/assets/images/team-member-2.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
                                 Audrey Ramirez
@@ -798,7 +796,7 @@ const Aboutus = () => {
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-3.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image src="/assets/images/team-member-3.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
                                 James Robinson
@@ -807,7 +805,7 @@ const Aboutus = () => {
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
-                                <img src="/assets/images/team-member-4.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
+                                <Image src="/assets/images/team-member-4.png" alt="Team" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
                             <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
                                 Daniel Allen
@@ -826,8 +824,8 @@ const Aboutus = () => {
                 <div className="container">
                     <div className="relative">
                         <div className="relative xl:inline-block" data-aos="fade-down" data-aos-duration="1000">
-                            <img src="/assets/images/stay-text.png" alt="Stay" className="left-1/2 mx-auto sm:absolute sm:-translate-x-1/2" />
-                            <img src="/assets/images/updated-text.png" alt="Update" className="mx-auto sm:pt-4 xl:mx-0" />
+                            <Image src="/assets/images/stay-text.png" alt="Stay" className="left-1/2 mx-auto sm:absolute sm:-translate-x-1/2" />
+                            <Image src="/assets/images/updated-text.png" alt="Update" className="mx-auto sm:pt-4 xl:mx-0" />
                             <div className="top-20 ltr:left-[105%] rtl:right-[105%] xl:absolute">
                                 <svg
                                     width="320"
