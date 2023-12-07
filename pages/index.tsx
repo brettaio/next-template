@@ -2,49 +2,46 @@ import Testimonial from '../components/Testimonial';
 import { useState } from 'react';
 import CounterComponent from '../components/CounterComponent';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
 
-const Index = (props: any) => {
+const Index = () => {
     const [activeTab, setActiveTab] = useState<string>('all');
 
     return (
         <div className="overflow-x-hidden">
             <div className="overflow-hidden bg-black pt-[82px] sm:-mx-[250px] sm:rounded-b-[50%] lg:-mx-[150px] lg:pt-[106px]">
-                <div className="relative">
-                    <img src="/assets/images/banner-lefticon.png" alt="banner-lefticon" className="absolute left-0 top-20 sm:left-[250px] lg:left-[150px]" />
-                    <img
-                        src="/assets/images/banner-rightIcon.png"
-                        alt="banner-rightIcon"
-                        className="absolute right-0 -top-4 sm:right-[250px] lg:right-[150px]"
-                    />
-                    <div className="container">
-                        <div className="relative bg-[url(/assets/images/world-map.png)] bg-cover bg-top bg-no-repeat pt-14 pb-0 lg:pt-20 lg:pb-60 xl:pt-36">
-                            <div className="relative z-[1] text-center text-white lg:w-3/5 ltr:lg:text-left rtl:lg:text-right xl:w-1/2">
-                                <h2 className="text-4xl font-extrabold leading-normal sm:text-5xl lg:text-[70px] lg:leading-[90px] ">
-                                    Make your <span className="italic text-primary">team</span> <span className="italic text-secondary">work</span> together
+                <div className="container">
+                    <div className="relative bg-[url(/assets/images/world-map.png)] bg-cover bg-top bg-no-repeat pt-14 pb-0 lg:pt-20 lg:pb-60 xl:pt-36">
+                        <div className="relative z-[1] flex flex-col lg:flex-row lg:text-left xl:w-full">
+                            <div className="flex flex-col items-center lg:w-1/2 lg:pr-8">
+                                {/* Content for the left div */}
+                                <h2 className="text-center text-4xl font-extrabold text-white sm:text-5xl lg:text-[70px] lg:leading-[90px] ">
+                                    Bretta <span className="mt-6 italic text-primary">Gets </span>
+                                    <span className="italic text-secondary">Results Online</span>
                                 </h2>
-                                <p className="my-8 text-lg lg:w-[90%] ">
-                                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.
-                                </p>
-                                <Link href="/about-us" className="btn mx-auto mt-2 block w-fit bg-white lg:mx-0 lg:rtl:ml-auto">
-                                    read more
-                                </Link>
+                                <p className="mt-8 mb-8 text-start text-xl text-white lg:w-[90%]">This cheeky fella here...</p>
+                                <p className="mb-8 text-center text-xl text-white lg:w-[90%] ">Maximizes Google Ad Accounts.</p>
+                                <p className="mb-8 text-end text-xl text-white lg:w-[90%]">With Expert Management & Strategy.</p>
+                                <div className=" lg:self-end">
+                                    <Link href="/about-us" className="btn block bg-white">
+                                        How Does He Do It?
+                                    </Link>
+                                </div>
                             </div>
                             <div
-                                className="bottom-0 mx-auto mt-5 mb-2 w-auto ltr:right-0 rtl:left-0 md:w-[540px] lg:absolute lg:mb-0 lg:mt-0 xl:w-[650px]"
+                                className="mx-auto mb-16 w-auto md:w-[auto] lg:w-1/2 xl:h-[auto] xl:w-[auto]"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
                                 data-aos-offset="0"
                                 data-aos-delay="200"
                             >
-                                <img src="/assets/images/home-banner-icon.svg" alt="home-banner-icon" className="rtl:rotate-y-180" />
+                                <img src="/assets/images/mugshot.svg" alt="home-banner-icon" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section className="bg-[url(/assets/images/service-bg.png)] bg-cover bg-center bg-no-repeat py-14 dark:bg-none lg:py-[100px]">
+
+            <section className="bg-[url(/assets/images/service-bg.png)] bg-cover bg-center bg-no-repeat py-14 lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
                         <h6>High - Impact Services</h6>
@@ -53,7 +50,7 @@ const Index = (props: any) => {
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <div
-                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 "
                                 style={{
                                     boxShadow: '-20px 30px 70px rgba(219, 222, 225, 0.4)',
                                 }}
@@ -76,18 +73,15 @@ const Index = (props: any) => {
                                         />
                                     </svg>
                                 </div>
-                                <Link
-                                    href="/services-detail"
-                                    className="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
-                                >
+                                <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     UI/UX Design
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
                                     We provide services with the best designs than our designer team for your business.
                                 </p>
                                 <Link
                                     href="/services-detail"
-                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black rtl:rotate-180 dark:bg-gray-dark"
+                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black"
                                 >
                                     <svg
                                         width="20"
@@ -95,7 +89,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 20 20"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="text-black transition group-hover:text-white dark:text-white"
+                                        className="text-black transition group-hover:text-white "
                                     >
                                         <path
                                             d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
@@ -107,7 +101,7 @@ const Index = (props: any) => {
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <div
-                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 "
                                 style={{
                                     boxShadow: '-20px 30px 70px rgba(219, 222, 225, 0.4)',
                                 }}
@@ -130,18 +124,15 @@ const Index = (props: any) => {
                                         />
                                     </svg>
                                 </div>
-                                <Link
-                                    href="/services-detail"
-                                    className="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
-                                >
+                                <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     Web Development
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
                                     We help develop company websites to be more professional and attractive
                                 </p>
                                 <Link
                                     href="/services-detail"
-                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black rtl:rotate-180 dark:bg-gray-dark"
+                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black"
                                 >
                                     <svg
                                         width="20"
@@ -149,7 +140,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 20 20"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="text-black transition group-hover:text-white dark:text-white"
+                                        className="text-black transition group-hover:text-white "
                                     >
                                         <path
                                             d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
@@ -161,7 +152,7 @@ const Index = (props: any) => {
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <div
-                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                className="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 "
                                 style={{
                                     boxShadow: '-20px 30px 70px rgba(219, 222, 225, 0.4)',
                                 }}
@@ -184,18 +175,15 @@ const Index = (props: any) => {
                                         />
                                     </svg>
                                 </div>
-                                <Link
-                                    href="/services-detail"
-                                    className="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
-                                >
+                                <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     Digital Marketing
                                 </Link>
-                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
                                     We also help you market your products through an online marketplace.
                                 </p>
                                 <Link
                                     href="/services-detail"
-                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black rtl:rotate-180 dark:bg-gray-dark"
+                                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3F4F6] transition group-hover:bg-black "
                                 >
                                     <svg
                                         width="20"
@@ -203,7 +191,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 20 20"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="text-black transition group-hover:text-white dark:text-white"
+                                        className="text-black transition group-hover:text-white "
                                     >
                                         <path
                                             d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
@@ -217,17 +205,17 @@ const Index = (props: any) => {
                 </div>
             </section>
             <section
-                className="py-14 dark:!bg-none lg:py-[100px]"
+                className="py-14  lg:py-[100px]"
                 style={{
                     background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 54.69%)',
                 }}
             >
                 <CounterComponent title="Company Facts" />
-                <div className="relative my-14 mx-auto border-[10px] border-transparent bg-black py-14 dark:border-black dark:bg-gray-dark lg:my-[100px] lg:py-[100px] xl:max-w-[1440px] xl:rounded-3xl">
+                <div className="relative my-14 mx-auto border-[10px] border-transparent bg-black py-14  lg:my-[100px] lg:py-[100px] xl:max-w-[1440px] xl:rounded-3xl">
                     <div className="container">
                         <div className="items-end gap-4 lg:flex xl:gap-0">
                             <div className="lg:w-1/2">
-                                <div className="heading mb-16 text-center ltr:lg:text-left rtl:lg:text-right">
+                                <div className="heading mb-16 text-center lg:text-left">
                                     <h6>What Makes us Different?</h6>
                                     <h4 className="leading-normal !text-white lg:!leading-[50px]">We bring solutions to make life easier for our customers.</h4>
                                 </div>
@@ -253,7 +241,7 @@ const Index = (props: any) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div className="ltr:pl-3 rtl:pr-3">
+                                        <div className="pl-3">
                                             <h4 className="mb-2 text-lg font-bold text-white">Creativity</h4>
                                             <p className="font-semibold">Curabitur blandit lacus porttitor ridiculus mus.</p>
                                         </div>
@@ -326,7 +314,7 @@ const Index = (props: any) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div className="ltr:pl-3 rtl:pr-3">
+                                        <div className="pl-3">
                                             <h4 className="mb-2 text-lg font-bold text-white">Innovative Thinking</h4>
                                             <p className="font-semibold">There are many variations of passages of Lorem Ipsum available</p>
                                         </div>
@@ -362,7 +350,7 @@ const Index = (props: any) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div className="ltr:pl-3 rtl:pr-3">
+                                        <div className="pl-3">
                                             <h4 className="mb-2 text-lg font-bold text-white">Rapid Solutions</h4>
                                             <p className="font-semibold">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                                         </div>
@@ -388,7 +376,7 @@ const Index = (props: any) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div className="ltr:pl-3 rtl:pr-3">
+                                        <div className="pl-3">
                                             <h4 className="mb-2 text-lg font-bold text-white">Top-Notch Support</h4>
                                             <p className="font-semibold">
                                                 It has survived not only five centuries, but also the leap into electronic typesetting
@@ -397,27 +385,27 @@ const Index = (props: any) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="top-1/2 mx-auto mt-10 ltr:right-5 rtl:left-5 md:w-[45%] lg:mt-0 xl:absolute xl:-translate-y-1/2">
-                                <img src="/assets/images/box-img.png" alt="box-img" className="w-full rtl:rotate-y-180" />
+                            <div className="top-1/2 right-5 mx-auto mt-10 md:w-[45%] lg:mt-0 xl:absolute xl:-translate-y-1/2">
+                                <img src="/assets/images/box-img.png" alt="box-img" className="w-full" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="container">
                     <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between">
-                        <div className="heading text-center ltr:lg:text-left rtl:lg:text-right">
+                        <div className="heading text-center lg:text-left">
                             <h6>Our Project</h6>
                             <h4>Some of our finest work.</h4>
                         </div>
                         {/* <div className="flex items-center justify-end gap-4">
-                            <div className="text-sm font-extrabold text-black dark:text-white">View All</div>
-                            <button type="button" className="bg-black/5 dark:bg-white/5 w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary dark:hover:bg-secondary transition">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black dark:text-white">
+                            <div className="text-sm font-extrabold text-black ">View All</div>
+                            <button type="button" className="bg-black/5  w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary  transition">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black ">
                                     <path d="M5.95007 1.2002L1.48924 5.3424C1.06317 5.73803 1.06317 6.41236 1.48924 6.80799L5.95007 10.9502" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                                 </svg>
                             </button>
-                            <button type="button" className="bg-black/5 dark:bg-white/5 text-p w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary dark:hover:bg-secondary transition">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black dark:text-white">
+                            <button type="button" className="bg-black/5  text-p w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black ">
                                     <path d="M1.05005 10.7998L5.51089 6.6576C5.93695 6.26197 5.93695 5.58764 5.51089 5.19201L1.05005 1.0498" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                                 </svg>
                             </button>
@@ -459,61 +447,61 @@ const Index = (props: any) => {
                     </div>
                     <div className="projects grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         <div className={`project ${activeTab === 'all' || activeTab === 'web' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-1.png" alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">Space Landing page</h6>
+                                    <h6 className="mb-1 text-black ">Space Landing page</h6>
                                     <p>Website</p>
                                 </div>
                             </div>
                         </div>
                         <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-2.png" alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">Crypto Game - UX Interface</h6>
+                                    <h6 className="mb-1 text-black ">Crypto Game - UX Interface</h6>
                                     <p>Website, App</p>
                                 </div>
                             </div>
                         </div>
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-3.png" alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">Looking for a quiet place</h6>
+                                    <h6 className="mb-1 text-black ">Looking for a quiet place</h6>
                                     <p>Website</p>
                                 </div>
                             </div>
                         </div>
                         <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-4.png" alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">WeTour - Travel Hero Illustration</h6>
+                                    <h6 className="mb-1 text-black ">WeTour - Travel Hero Illustration</h6>
                                     <p>Website</p>
                                 </div>
                             </div>
                         </div>
                         <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-5.png" alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">Digital Art Guide</h6>
+                                    <h6 className="mb-1 text-black ">Digital Art Guide</h6>
                                     <p>Branding</p>
                                 </div>
                             </div>
                         </div>
                         <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
-                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                            <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
                                 <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
                                 <img src="/assets/images/project-6.png" alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black dark:text-white">Frozeverse - 3D and motion design</h6>
+                                    <h6 className="mb-1 text-black ">Frozeverse - 3D and motion design</h6>
                                     <p>Branding, Website, App</p>
                                 </div>
                             </div>
@@ -521,7 +509,7 @@ const Index = (props: any) => {
                     </div>
                 </div>
             </section>
-            <section className="bg-[url(/assets/images/team-bg.png)] bg-cover bg-center bg-no-repeat py-14 dark:bg-black/50 lg:py-[100px]">
+            <section className="bg-[url(/assets/images/team-bg.png)] bg-cover bg-center bg-no-repeat py-14  lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
                         <h6>Meet Our Team</h6>
@@ -532,42 +520,34 @@ const Index = (props: any) => {
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                 <img src="/assets/images/team-member-1.png" alt="team-member-1" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
-                                Aditya Patel
-                            </h4>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Aditya Patel</h4>
                             <h6 className="text-sm font-bold">Chief Executive Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                 <img src="/assets/images/team-member-2.png" alt="team-member-2" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
-                                Audrey Ramirez
-                            </h4>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Audrey Ramirez</h4>
                             <h6 className="text-sm font-bold">Chief Operating Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                 <img src="/assets/images/team-member-3.png" alt="team-member-3" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
-                                James Robinson
-                            </h4>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">James Robinson</h4>
                             <h6 className="text-sm font-bold">Chief Financial Officer</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                 <img src="/assets/images/team-member-4.png" alt="team-member-4" className="h-full w-full rounded-3xl object-cover object-top" />
                             </div>
-                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
-                                Daniel Allen
-                            </h4>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary ">Daniel Allen</h4>
                             <h6 className="text-sm font-bold">Chief Marketing Officer</h6>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
+            <section className="bg-gradient-to-b from-white/60 to-transparent py-14 lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
                         <h6>Pricing Plan</h6>
@@ -575,12 +555,12 @@ const Index = (props: any) => {
                     </div>
                     <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
                         <div
-                            className="group flex flex-col rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            className="group flex flex-col rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)]  sm:px-6"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >
                             <div className="mb-8">
-                                <h3 className="text-[22px] font-black text-black dark:text-white">Intro</h3>
+                                <h3 className="text-[22px] font-black text-black ">Intro</h3>
                             </div>
                             <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
                                 <li className="flex items-center">
@@ -596,7 +576,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    <p className="pl-3">Daily content updates</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -611,7 +591,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    <p className="pl-3">Unlimited downloads of FREE resources</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -626,7 +606,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    <p className="pl-3">Unlimited PREMIUM downloads</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -641,7 +621,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    <p className="pl-3">Valid commercial licenses</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -658,7 +638,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    <p className="pl-3">Advanced Search</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -675,7 +655,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    <p className="pl-3">No attribution required</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -692,32 +672,30 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    <p className="pl-3">Browse with no ads</p>
                                 </li>
                             </ul>
                             <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                                 <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                    <div className="relative mb-2 pl-5 text-lg font-extrabold before:absolute before:top-1/2 before:left-0 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white sm:mb-0">
                                         Monthly
                                     </div>
-                                    <Link href="#" className="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44">
+                                    <Link href="#" className="btn text-xl text-white group-hover:bg-white group-hover:text-primary xl:w-44">
                                         $39.99
                                         <small className="text-xs lowercase">/month</small>
                                     </Link>
                                 </div>
-                                <span className="block text-center text-sm font-bold text-black dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left">
-                                    Billed every month
-                                </span>
+                                <span className="block text-center text-sm font-bold text-black  sm:pr-5 sm:text-right">Billed every month</span>
                             </div>
                         </div>
                         <div
-                            className="group flex flex-col rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            className="group flex flex-col rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)]  sm:px-6"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >
                             <div className="relative mb-8">
-                                <h3 className="text-[22px] font-black text-black dark:text-white">Base</h3>
-                                <div className="group-hover:white/10 absolute top-1/2 -translate-y-1/2 rounded-xl bg-secondary/10 py-2 px-4 text-xs font-black text-secondary group-hover:bg-white group-hover:text-black ltr:right-0 rtl:left-0">
+                                <h3 className="text-[22px] font-black text-black ">Base</h3>
+                                <div className="group-hover:white/10 absolute top-1/2 right-0 -translate-y-1/2 rounded-xl bg-secondary/10 py-2 px-4 text-xs font-black text-secondary group-hover:bg-white group-hover:text-black">
                                     MOST POPULAR
                                 </div>
                             </div>
@@ -735,7 +713,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    <p className="pl-3">Daily content updates</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -750,7 +728,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    <p className="pl-3">Unlimited downloads of FREE resources</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -765,7 +743,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    <p className="pl-3">Unlimited PREMIUM downloads</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -780,7 +758,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    <p className="pl-3">Valid commercial licenses</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -795,7 +773,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    <p className="pl-3">Advanced Search</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -810,7 +788,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    <p className="pl-3">No attribution required</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -825,34 +803,29 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    <p className="pl-3">Browse with no ads</p>
                                 </li>
                             </ul>
                             <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                                 <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                    <div className="relative mb-2 pl-5 text-lg font-extrabold before:absolute before:top-1/2 before:left-0 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white sm:mb-0">
                                         Yearly
                                     </div>
-                                    <Link
-                                        href="#"
-                                        className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
-                                    >
+                                    <Link href="#" className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary xl:w-44">
                                         $14.99
                                         <small className="text-xs lowercase">/month</small>
                                     </Link>
                                 </div>
-                                <span className="block text-center text-sm font-bold text-black dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left">
-                                    $179.00 every 12 months
-                                </span>
+                                <span className="block text-center text-sm font-bold text-black  sm:pr-5 sm:text-right">$179.00 every 12 months</span>
                             </div>
                         </div>
                         <div
-                            className="group flex flex-col rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            className="group flex flex-col rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] sm:px-6"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >
                             <div className="mb-8">
-                                <h3 className="text-[22px] font-black text-black group-hover:text-white dark:text-white">Pro</h3>
+                                <h3 className="text-[22px] font-black text-black group-hover:text-white ">Pro</h3>
                             </div>
                             <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
                                 <li className="flex items-center">
@@ -868,7 +841,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    <p className="pl-3">Daily content updates</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -883,7 +856,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    <p className="pl-3">Unlimited downloads of FREE resources</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -898,7 +871,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    <p className="pl-3">Unlimited PREMIUM downloads</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -913,7 +886,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    <p className="pl-3">Valid commercial licenses</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -928,7 +901,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    <p className="pl-3">Advanced Search</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -943,7 +916,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    <p className="pl-3">No attribution required</p>
                                 </li>
                                 <li className="flex items-center">
                                     <div>
@@ -958,19 +931,19 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    <p className="pl-3">Browse with no ads</p>
                                 </li>
                             </ul>
                             <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                                 <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                    <div className="relative mb-2 pl-5 text-lg font-extrabold before:absolute before:top-1/2 before:left-0 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white sm:mb-0">
                                         Yearly
                                     </div>
                                     <Link href="#" className="btn bg-black text-xl text-white group-hover:bg-white group-hover:text-black xl:w-44">
                                         $499
                                     </Link>
                                 </div>
-                                <span className="block text-center text-sm font-bold text-black group-hover:text-white dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left">
+                                <span className="block text-center text-sm font-bold text-black group-hover:text-white  sm:pr-5 sm:text-right">
                                     Billed once only
                                 </span>
                             </div>
@@ -979,26 +952,23 @@ const Index = (props: any) => {
                 </div>
             </section>
             <Testimonial />
-            <section className="py-14 dark:bg-gray-dark lg:py-[100px]">
+            <section className="py-14  lg:py-[100px]">
                 <div className="container">
                     <div className="relative z-10 lg:flex">
-                        <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
+                        <div className="heading text-center lg:mb-0 lg:w-1/3 lg:pr-10 lg:text-left">
                             <h6>Get In Touch.</h6>
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
                             <img src="/assets/images/form-img.png" alt="form-image" className="mx-auto" data-aos="fade-right" data-aos-duration="1000" />
                         </div>
-                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
+                        <form action="" className="rounded-3xl bg-white px-4 py-12 lg:w-2/3 lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">
                                 <div className="relative">
                                     <input
                                         type="text"
                                         name="name"
-                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 pr-12 font-bold outline-none transition focus:border-secondary "
                                     />
-                                    <label
-                                        htmlFor=""
-                                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white"
-                                    >
+                                    <label htmlFor="" className="absolute -top-3 left-6 bg-white px-2 font-bold">
                                         Full Name
                                     </label>
                                     <svg
@@ -1007,7 +977,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 20 22"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                                        className="absolute top-1/2 right-4 -translate-y-1/2"
                                     >
                                         <path
                                             d="M5.42855 5.57875C5.42855 8.10348 7.47525 10.1502 9.99998 10.1502C12.5247 10.1502 14.5714 8.10348 14.5714 5.57875C14.5714 3.05402 12.5247 1.00732 9.99998 1.00732"
@@ -1026,12 +996,9 @@ const Index = (props: any) => {
                                     <input
                                         type="email"
                                         name="email"
-                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 pr-12 font-bold outline-none transition focus:border-secondary"
                                     />
-                                    <label
-                                        htmlFor=""
-                                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white"
-                                    >
+                                    <label htmlFor="" className="absolute -top-3 left-6 bg-white px-2 font-bold">
                                         Email Address
                                     </label>
                                     <svg
@@ -1040,7 +1007,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 22 21"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                                        className="absolute top-1/2 right-4 -translate-y-1/2"
                                     >
                                         <path
                                             d="M1 8.00732V7.00732C1 4.2459 3.23858 2.00732 6 2.00732H16C18.7614 2.00732 21 4.2459 21 7.00732V13.0073C21 15.7687 18.7614 18.0073 16 18.0073H6C3.23858 18.0073 1 15.7687 1 13.0073V12.0073"
@@ -1061,12 +1028,9 @@ const Index = (props: any) => {
                                     <input
                                         type="text"
                                         name="mobile"
-                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 pr-12 font-bold outline-none transition focus:border-secondary "
                                     />
-                                    <label
-                                        htmlFor=""
-                                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white"
-                                    >
+                                    <label htmlFor="" className="absolute -top-3 left-6 bg-white px-2 font-bold ">
                                         Mobile Number
                                     </label>
                                     <svg
@@ -1075,7 +1039,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 22 22"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                                        className="absolute top-1/2 right-4 -translate-y-1/2"
                                     >
                                         <path
                                             d="M6.45241 1.40806C5.45292 0.783702 4.14202 0.887138 3.2983 1.73086L1.86856 3.1606C-0.302899 5.33207 1.73747 10.8931 6.42586 15.5815C11.1142 20.2699 16.6753 22.3102 18.8467 20.1388L20.2765 18.709C21.2635 17.722 21.2374 16.0956 20.2182 15.0764L18.0036 12.8619C16.9844 11.8426 15.358 11.8165 14.371 12.8036L14.0639 13.1107C13.531 13.6436 12.6713 13.6957 12.0713 13.2005C11.4925 12.7229 10.9159 12.208 10.3576 11.6497C9.79933 11.0914 9.28441 10.5149 8.80678 9.93607C8.31161 9.33601 8.36374 8.47631 8.89666 7.9434L9.20375 7.63631C9.98187 6.85819 10.1303 5.68271 9.65898 4.72062"
@@ -1089,12 +1053,9 @@ const Index = (props: any) => {
                                     <input
                                         type="text"
                                         name="city"
-                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 pr-12 font-bold outline-none transition focus:border-secondary"
                                     />
-                                    <label
-                                        htmlFor=""
-                                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white"
-                                    >
+                                    <label htmlFor="" className="absolute -top-3 left-6 bg-white px-2 font-bold ">
                                         City
                                     </label>
                                     <svg
@@ -1103,7 +1064,7 @@ const Index = (props: any) => {
                                         viewBox="0 0 20 22"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                                        className="absolute top-1/2 right-4 -translate-y-1/2"
                                     >
                                         <path
                                             d="M5.89416 2.31259C7.20149 1.48625 8.75475 1.00732 10.4211 1.00732C15.0719 1.00732 18.8421 4.73828 18.8421 9.34066C18.8421 15.0541 12.1053 21.0073 10.4211 21.0073C8.73684 21.0073 2 15.0541 2 9.34066C2 7.87581 2.38193 6.49924 3.05263 5.30315"
@@ -1124,9 +1085,9 @@ const Index = (props: any) => {
                                 <input
                                     type="text"
                                     name="message"
-                                    className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 pr-12 font-bold outline-none transition focus:border-secondary"
                                 />
-                                <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                <label htmlFor="" className="absolute -top-3 left-6 bg-white px-2 font-bold">
                                     Message
                                 </label>
                                 <svg
@@ -1135,7 +1096,7 @@ const Index = (props: any) => {
                                     viewBox="0 0 22 22"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                                    className="absolute top-1/2 right-4 -translate-y-1/2 "
                                 >
                                     <path
                                         d="M1 11.467V18.9267C1 19.7652 1.96993 20.2314 2.6247 19.7076L5.45217 17.4456C5.8068 17.1619 6.24742 17.0073 6.70156 17.0073H16C18.7614 17.0073 21 14.7687 21 12.0073V6.00732C21 3.2459 18.7614 1.00732 16 1.00732H6C3.23858 1.00732 1 3.2459 1 6.00732V7.62225"
@@ -1148,8 +1109,8 @@ const Index = (props: any) => {
                                     <circle cx="16.05" cy="9.05713" r="1.25" fill="currentColor" />
                                 </svg>
                             </div>
-                            <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
-                                <button type="button" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
+                            <div className="mt-10 text-center lg:text-right">
+                                <button type="button" className="btn bg-gray px-12 capitalize text-white">
                                     Send Message
                                 </button>
                             </div>
