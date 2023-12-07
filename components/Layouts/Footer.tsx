@@ -1,4 +1,6 @@
+/* eslint-disable max-len */
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -6,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="grid gap-y-10 gap-x-4 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
                     <div className="relative">
-                        <img src="/assets/images/logo.png" alt="bretta etc logo in the bottom footer" className="h-7 w-auto" />
+                        <Image src="/assets/images/mugshot.svg" alt="bretta etc logo in the bottom footer" className="h-7 w-auto" />
                         <ul className="mt-12 flex items-center gap-8">
                             <li>
                                 <Link href="#">
@@ -69,12 +71,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                         </ul>
-                        <img src="/assets/images/footer-shape.png" alt="footer-shape" className="absolute bottom-0 right-0 sm:left-0" />
-                        <img
-                            src="/assets/images/footer-shape-dark.png"
-                            alt="footer-shape-dark"
-                            className="absolute bottom-0 right-0 hidden dark:block sm:left-0"
-                        />
+                        <Image src="/assets/images/footer-shape.png" alt="footer-shape" className="absolute bottom-0 right-0 sm:left-0" />
                     </div>
                     <div>
                         <ul className="flex flex-col gap-3 font-bold">
