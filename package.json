@@ -1,5 +1,5 @@
 {
-    "name": "my-app",
+    "name": "bretta-etc-ltd",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@reduxjs/toolkit": "^1.9.0",
+        "@swc/helpers": "^0.5.3",
         "@tailwindcss/line-clamp": "^0.4.2",
         "@types/node": "18.11.9",
         "@types/react": "18.0.25",

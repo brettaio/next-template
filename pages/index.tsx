@@ -7,7 +7,6 @@ import { IRootState } from '../store';
 
 const Index = (props: any) => {
     const [activeTab, setActiveTab] = useState<string>('all');
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     return (
         <div className="overflow-x-hidden">
@@ -34,7 +33,7 @@ const Index = (props: any) => {
                             </div>
                             <div
                                 className="bottom-0 mx-auto mt-5 mb-2 w-auto ltr:right-0 rtl:left-0 md:w-[540px] lg:absolute lg:mb-0 lg:mt-0 xl:w-[650px]"
-                                data-aos={isRtl ? 'fade-right' : 'fade-left'}
+                                data-aos="fade-left"
                                 data-aos-duration="1000"
                                 data-aos-offset="0"
                                 data-aos-delay="200"
@@ -232,7 +231,7 @@ const Index = (props: any) => {
                                     <h6>What Makes us Different?</h6>
                                     <h4 className="leading-normal !text-white lg:!leading-[50px]">We bring solutions to make life easier for our customers.</h4>
                                 </div>
-                                <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2" data-aos={isRtl ? 'fade-left' : 'fade-right'} data-aos-duration="1000">
+                                <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2" data-aos="fade-right" data-aos-duration="1000">
                                     <div className="flex transition">
                                         <div>
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -575,7 +574,11 @@ const Index = (props: any) => {
                         <h4>Choose Affordable Prices</h4>
                     </div>
                     <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
-                        <div className="flex flex-col group rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div
+                            className="group flex flex-col rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
                             <div className="mb-8">
                                 <h3 className="text-[22px] font-black text-black dark:text-white">Intro</h3>
                             </div>
@@ -707,7 +710,11 @@ const Index = (props: any) => {
                                 </span>
                             </div>
                         </div>
-                        <div className="flex flex-col group rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div
+                            className="group flex flex-col rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
                             <div className="relative mb-8">
                                 <h3 className="text-[22px] font-black text-black dark:text-white">Base</h3>
                                 <div className="group-hover:white/10 absolute top-1/2 -translate-y-1/2 rounded-xl bg-secondary/10 py-2 px-4 text-xs font-black text-secondary group-hover:bg-white group-hover:text-black ltr:right-0 rtl:left-0">
@@ -839,7 +846,11 @@ const Index = (props: any) => {
                                 </span>
                             </div>
                         </div>
-                        <div className="flex flex-col group rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div
+                            className="group flex flex-col rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
                             <div className="mb-8">
                                 <h3 className="text-[22px] font-black text-black group-hover:text-white dark:text-white">Pro</h3>
                             </div>
@@ -974,13 +985,7 @@ const Index = (props: any) => {
                         <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
                             <h6>Get In Touch.</h6>
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
-                            <img
-                                src="/assets/images/form-img.png"
-                                alt="form-image"
-                                className="mx-auto"
-                                data-aos={isRtl ? 'fade-left' : 'fade-right'}
-                                data-aos-duration="1000"
-                            />
+                            <img src="/assets/images/form-img.png" alt="form-image" className="mx-auto" data-aos="fade-right" data-aos-duration="1000" />
                         </div>
                         <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">

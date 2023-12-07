@@ -13,26 +13,26 @@ const BlogSlider = ({
         {
             id: 1,
             thumbnail: '/assets/images/blog1.png',
-            title: 'UI/UX Design',
-            excerpt: 'Simple & constructive methods to improve your visual/UI design',
+            title: 'Manual Bid Scaling Through Bid Adjustments',
+            excerpt: 'Simple & constructive methods to improve your Google Ads Results',
             description:
-                'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+                'A manual bidding strategy is a by product of constant management, but selective bid adjusting is the secret sauce to its true successes. Find out how and why',
         },
         {
             id: 2,
             thumbnail: '/assets/images/blog2.png',
-            title: 'Project Management',
-            excerpt: 'Why is JIRA important for managing projects?',
+            title: 'I Got The Need, The Need For (page) Speed (insights)',
+            excerpt: 'Page Speed Rules all in PPC',
             description:
-                'Jira works well for Agile development projects for many reasons, including the ability to create Kanban and Scrum boards with sprint planning and issue time estimation capabilities.',
+                'A Google Ads account is only as good as the assets it points to. If it takes to long to load, every millisecond a user waits is another millisecond closer to the dreaded post ad click bounce',
         },
         {
             id: 3,
             thumbnail: '/assets/images/blog3.png',
-            title: 'SEO Marketing',
-            excerpt: 'What is SEO (Search Engine Optimization)?',
+            title: 'Long Term Game Means Long Term Gains',
+            excerpt: "So You've Got A Mate That Said SEO",
             description:
-                'Search engine optimization is the process of improving the quality and quantity of website traffic to a website or a web page from search engines.',
+                'Search Engine Optimisation is the most smoke and mirror concept in digital advertising, there is no secret sauce, well there is... Kind of, let me explain... If you have the time (pun intended)',
         },
     ],
     type = 'service',

@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import Aos from 'aos';
 
 const initialState = {
-    theme: typeof window === 'undefined' ? 'light' : localStorage.getItem('theme') || 'light',
-    direction: typeof window === 'undefined' ? 'ltr' : localStorage.getItem('direction') || 'ltr',
+    theme: 'light',
+    direction: 'ltr',
 };
 
 const themeConfigSlice = createSlice({
@@ -14,11 +14,6 @@ const themeConfigSlice = createSlice({
             payload = payload || state.theme; // light | dark
             localStorage.setItem('theme', payload);
             state.theme = payload;
-            if (state.theme === 'dark') {
-                document.querySelector('body')?.classList.add('dark');
-            } else {
-                document.querySelector('body')?.classList.remove('dark');
-            }
         },
         toggleDirection(state, { payload }) {
             payload = payload || state.direction; // rtl, ltr

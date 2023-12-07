@@ -7,22 +7,20 @@ import BlogSlider from '../components/BlogSlider';
 import { IRootState } from '../store';
 
 const Aboutus = () => {
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
-
     return (
         <div>
             <Head>
-                <title>About Us | Plurk – Tailwind CSS Multipurpose Landing Templates</title>
+                <title>About Bretta Etc Ltd. | Google Ad Management & Licensed Templates</title>
             </Head>
             <div className="bg-[url(/assets/images/inner-page-hero-bg.png)] bg-cover bg-bottom bg-no-repeat pt-[82px] lg:pt-[106px]">
                 <div className="relative">
                     <div className="container">
                         <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
                             <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right">
-                                <h6>About Us</h6>
-                                <h4 className="!text-white">About Plurk Technologies</h4>
+                                <h6>So Whats the Goss With Bretta Etc.</h6>
+                                <h4 className="!text-white">Well simple - here's a story for you. </h4>
                             </div>
-                            <div className="relative mt-6 md:mt-0" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
+                            <div className="relative mt-6 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
                                 <svg
                                     width="374"
                                     height="282"
@@ -624,29 +622,31 @@ const Aboutus = () => {
                 </div>
             </div>
 
-            <section className="bg-gradient-to-t from-white/[56%] to-white/0 py-14 dark:!bg-none lg:py-[100px]">
-                <CounterComponent title="Company Facts" />
-            </section>
-
             <section className="relative pt-14 lg:pb-48 lg:pt-[100px]">
                 <div className="container relative z-[1]">
                     <div className="text-center lg:w-1/2 ltr:lg:text-left rtl:lg:text-right">
                         <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right xl:w-[95%]">
-                            <h6>Who are we?</h6>
-                            <h4>We thrive to help our clients have global impact</h4>
+                            <h6>bretta.io - That's me! I'm Bretta.</h6>
+                            <h4>Once upon a time a friend doubled the sylabuls to my name by adding an 'a' at the end. Ingenious!</h4>
                         </div>
                         <p className="pb-10 text-lg font-semibold leading-[30px]">
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a
-                            typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
+                            With this nickname in hand, back in the old days when I used to call Australia home. Then I moved. To Canada and by gosh. What a fun
+                            time to be alive. Cough Cough Recessions, Cough Cough shutting down companies, Cough cough no one wants to hire under certified
+                            technical staff. <br></br>
+                            <br></br>But alas, with a background in Google Ads marketing, I said 'That's it, I'm jumping into my own company!'
                         </p>
                         <Link href="/career" className="btn capitalize text-white">
-                            Join Our Team
+                            COOL BUTTON TIME!
                         </Link>
                     </div>
                 </div>
-                <div className="bottom-0 ltr:right-0 rtl:left-0 lg:absolute" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
-                    <img src="/assets/images/about-who-bg.png" alt="About" className="rtl:rotate-y-180" />
+                <div className="bottom-0 ltr:right-0 rtl:left-0 lg:absolute" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="/assets/images/about-bg.png" alt="About" className="rtl:rotate-y-180" />
                 </div>
+            </section>
+
+            <section className="bg-gradient-to-t from-white/[56%] to-white/0 py-14 dark:!bg-none lg:py-[100px]">
+                <CounterComponent title="Company Facts" />
             </section>
 
             <section className="relative py-14 lg:py-[100px] xl:-mt-[100px]">
