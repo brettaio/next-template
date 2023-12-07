@@ -21,7 +21,7 @@ const Header = (props: any) => {
             <div className="container">
                 <div className="flex items-center justify-between py-5 lg:py-0">
                     <Link href="/">
-                        <Image src="/assets/images/mugshot.svg" alt="bretta etc ltd logo" width={60} height={60} />
+                        <Image src="/assets/images/mugshot.svg" alt="bretta etc ltd logo" width={24} height={24} />
                     </Link>
                     <div className="flex items-center">
                         <div onClick={() => toggleMenu()} className={`overlay fixed inset-0 z-[51] bg-black/60 lg:hidden ${showMenu ? '' : 'hidden'}`}></div>
