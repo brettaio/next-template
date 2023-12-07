@@ -449,7 +449,7 @@ const Index = () => {
                                 </div>
                             </div>
                             <div className="top-1/2 right-5 mx-auto mt-10 md:w-[45%] lg:mt-0 xl:absolute xl:-translate-y-1/2">
-                                <Image src="/assets/images/box-img.png" height={512} width={512} alt="box-img" className="w-full" />
+                                <Image src="/assets/images/box-img.png" height={512} width={512} alt="box-img" className="w-full lg:hidden" />
                             </div>
                         </div>
                     </div>
