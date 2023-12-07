@@ -624,29 +624,37 @@ const Aboutus = () => {
 
             <section className="relative pt-14 lg:pb-48 lg:pt-[100px]">
                 <div className="container relative z-[1]">
-                    <div className="text-center lg:w-1/2 ltr:lg:text-left rtl:lg:text-right">
+                    <div className="mb-8 text-center lg:w-1/2 lg:text-left">
                         <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right xl:w-[95%]">
-                            <h6>bretta.io - That's me! I'm Bretta.</h6>
-                            <h4>Once upon a time a friend doubled the sylabuls to my name by adding an 'a' at the end. Ingenious!</h4>
+                            <h6>This is bretta.io and I am Bretta of Bretta Etc.</h6>
+                            <h4>
+                                Back In The Day, I Played Footy.<br></br>
+                                <br></br>It Was Easier To Shout Brett-a Than Brett!<br></br>
+                                <br></br> Simple. Effective. It Stuck. <br></br>
+                                <br></br>Much Like My Advertising Prowess. ZING!
+                            </h4>
                         </div>
                         <p className="pb-10 text-lg font-semibold leading-[30px]">
-                            With this nickname in hand, back in the old days when I used to call Australia home. Then I moved. To Canada and by gosh. What a fun
-                            time to be alive. Cough Cough Recessions, Cough Cough shutting down companies, Cough cough no one wants to hire under certified
-                            technical staff. <br></br>
-                            <br></br>But alas, with a background in Google Ads marketing, I said 'That's it, I'm jumping into my own company!'
+                            So to speed this up, I went to school, got a teaching degree, didn't really teach long, backpacked the US, came home, moved to
+                            Canada for a bit, met my wife, moved back home with her to Australia for a bit and had 2 kids.<br></br>
+                            <br></br> Then somewhere in the middle there, I worked in Marketing Firm focusing specifically on Google Ad Account Management.
+                            <br></br>
+                            <br></br>Many many clients, all different shapes and sizes. Really quite enjoyable. I found a secret balance to make things work.
+                            Which really wasn't a balance, but more an attention to detail and website tracking, but that gets technical and confusing for most
+                            business owners...<br></br> <br></br>So I started a company that I now use to impart the knowledge directly into your business.
                         </p>
-                        <Link href="/career" className="btn capitalize text-white">
+                        <Link href="/" className="btn capitalize text-white">
                             COOL BUTTON TIME!
                         </Link>
                     </div>
                 </div>
-                <div className="bottom-0 ltr:right-0 rtl:left-0 lg:absolute" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="/assets/images/about-bg.png" alt="About" className="rtl:rotate-y-180" />
+                <div className="bottom-0 right-0 lg:absolute" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="/assets/images/yeahyeah.svg" alt="About" />
                 </div>
             </section>
 
             <section className="bg-gradient-to-t from-white/[56%] to-white/0 py-14 dark:!bg-none lg:py-[100px]">
-                <CounterComponent title="Company Facts" />
+                <CounterComponent title="So let me share a little nitty gritty with you" />
             </section>
 
             <section className="relative py-14 lg:py-[100px] xl:-mt-[100px]">
@@ -655,11 +663,11 @@ const Aboutus = () => {
                 <div className="container relative z-[2] ltr:xl:pr-40 rtl:xl:pl-40">
                     <div className="lg:w-2/3">
                         <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right">
-                            <h6>How it works?</h6>
-                            <h4>Here are 3 working steps to organize our business projects.</h4>
+                            <h6>So why would you need a Google Ads Manager?</h6>
+                            <h4>I'll try bust it up in 3 quick and easy steps. Here Goes:</h4>
                         </div>
                         <p className="pb-10 text-center text-lg font-semibold leading-[30px] ltr:lg:text-left rtl:lg:text-right">
-                            Find out everything you need to know and more about how we create our business process models.
+                            It's a combination of a few concepts. Greatness takes time, greatness takes continual improvement, and greatness takes time.
                         </p>
                     </div>
                     <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
@@ -672,9 +680,10 @@ const Aboutus = () => {
                                     01
                                 </span>
                                 <div>
-                                    <h6 className="mb-1 font-bold text-secondary">Collect Ideas</h6>
+                                    <h6 className="mb-1 font-bold text-secondary">Break the mould</h6>
                                     <p className="text-sm font-semibold text-black dark:text-gray">
-                                        The generated Lorem Ipsum is therefore always free from repetition.
+                                        What you're currently doing, meets what I know how to do. This can be confronting for some. So we combine to find the
+                                        hopes, dreams and direction your endeavour wants to go.
                                     </p>
                                 </div>
                             </div>
@@ -756,61 +765,6 @@ const Aboutus = () => {
                                         High engagement rate since day one
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-14 lg:py-[100px]">
-                <div className="container">
-                    <div className="heading text-center lg:w-2/3 ltr:lg:text-left rtl:lg:text-right">
-                        <h4 className="mb-5">Our Awards</h4>
-                        <p className="text-lg leading-[23px]">
-                            As the world's leading web & mobile app development company have been privileged to win{' '}
-                            <span className="font-semibold text-black dark:text-white">13+ numerous awards</span> for our working process. We’re honored to be a
-                            recipient of each of these awards for our hard work & customers loyalty.
-                        </p>
-                    </div>
-                    <div className="grid gap-4 pt-5 sm:grid-cols-3 md:gap-[30px] lg:grid-cols-4 lg:pt-0">
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-1.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-2.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-3.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-4.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-5.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-6.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-7.png" alt="Award" className="mx-auto h-[100px]" />
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="rounded-[32px] border border-transparent bg-white py-9 px-4 transition hover:border-secondary">
-                                <img src="/assets/images/award-8.png" alt="Award" className="mx-auto h-[100px]" />
                             </div>
                         </div>
                     </div>

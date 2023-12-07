@@ -5,11 +5,11 @@ const CounterComponent = (props: any) => {
         <div className="container">
             <div className="heading text-center">
                 <h6>{props.title}</h6>
-                <h4>We are proud of our team</h4>
+                <h4>Here is a few statistical breakdowns of my history</h4>
             </div>
             <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-4">
                 <div data-aos="fade-up" data-aos-duration="1000">
-                    <div className="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10 dark:border-transparent dark:bg-gray-dark dark:hover:bg-secondary">
+                    <div className="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10">
                         <div>
                             <svg
                                 width="26"
@@ -17,7 +17,7 @@ const CounterComponent = (props: any) => {
                                 viewBox="0 0 26 26"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="text-secondary transition dark:group-hover:text-black"
+                                className="text-secondary transition "
                             >
                                 <g clipPath="url(#clip0_6_2530)">
                                     <path
@@ -37,12 +37,12 @@ const CounterComponent = (props: any) => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="ltr:pl-4 rtl:pr-4">
-                            <h4 className="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black">
-                                <CountUp start={0} end={10} duration={4} suffix="+"></CountUp>
+                        <div className="pl-4 ">
+                            <h4 className="pb-2.5 text-4xl font-black leading-none transition  ">
+                                <CountUp start={0} end={7} duration={1} suffix="+"></CountUp>
                             </h4>
 
-                            <span className="font-bold text-black transition dark:text-gray dark:group-hover:text-black">Year in Business</span>
+                            <span className="font-bold text-black transition ">Years In The Game</span>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const CounterComponent = (props: any) => {
                                 viewBox="0 0 26 26"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="text-secondary transition dark:group-hover:text-black"
+                                className="text-secondary transition "
                             >
                                 <g clipPath="url(#clip0_6_2631)">
                                     <path
@@ -75,11 +75,11 @@ const CounterComponent = (props: any) => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="ltr:pl-4 rtl:pr-4">
-                            <h4 className="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black">
-                                <CountUp start={0} end={120} duration={4} suffix="+"></CountUp>
+                        <div className="pl-4 ">
+                            <h4 className="pb-2.5 text-4xl font-black leading-none transition  ">
+                                <CountUp start={0} end={100} duration={1} suffix="+"></CountUp>
                             </h4>
-                            <span className="font-bold text-black transition dark:text-gray dark:group-hover:text-black">Team Members</span>
+                            <span className="font-bold text-black transition dark:text-gray ">Accounts Managed</span>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const CounterComponent = (props: any) => {
                                 viewBox="0 0 26 26"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="text-secondary transition dark:group-hover:text-black"
+                                className="text-secondary transition "
                             >
                                 <g clipPath="url(#clip0_6_2641)">
                                     <path
@@ -112,11 +112,11 @@ const CounterComponent = (props: any) => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="ltr:pl-4 rtl:pr-4">
-                            <h4 className="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black">
-                                <CountUp start={0} end={350} duration={4} suffix="+"></CountUp>{' '}
+                        <div className="pl-4 ">
+                            <h4 className="pb-2.5 text-4xl font-black leading-none transition  ">
+                                <CountUp start={0} end={1800} duration={1} suffix="+"></CountUp>{' '}
                             </h4>
-                            <span className="font-bold text-black transition dark:text-gray dark:group-hover:text-black">Happy Clients</span>
+                            <span className="font-bold text-black transition dark:text-gray ">Ad Campaigns Launched</span>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ const CounterComponent = (props: any) => {
                                 viewBox="0 0 26 26"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="text-secondary transition dark:group-hover:text-black"
+                                className="text-secondary transition "
                             >
                                 <g clipPath="url(#clip0_6_2651)">
                                     <path
@@ -149,11 +149,11 @@ const CounterComponent = (props: any) => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="ltr:pl-4 rtl:pr-4">
-                            <h4 className="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black">
-                                <CountUp start={0} end={1254} duration={4} suffix="+"></CountUp>{' '}
+                        <div className="pl-4 ">
+                            <h4 className="pb-2.5 text-4xl font-black leading-none transition  ">
+                                <CountUp start={0} end={10} duration={1} prefix={'Only '} suffix=" "></CountUp>
                             </h4>
-                            <span className="font-bold text-black transition dark:text-gray dark:group-hover:text-black">Project Done</span>
+                            <span className="font-bold text-black transition ">Clients At A Time</span>
                         </div>
                     </div>
                 </div>

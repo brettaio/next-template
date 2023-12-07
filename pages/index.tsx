@@ -44,8 +44,8 @@ const Index = () => {
             <section className="bg-[url(/assets/images/service-bg.png)] bg-cover bg-center bg-no-repeat py-14 lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
-                        <h6>High - Impact Services</h6>
-                        <h4>We help Brands with</h4>
+                        <h6>Bretta Brings The Holistic Approach To The Game</h6>
+                        <h4>Here Is How I Do It</h4>
                     </div>
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         <div data-aos="fade-up" data-aos-duration="1000">
@@ -73,8 +73,8 @@ const Index = () => {
                                         />
                                     </svg>
                                 </div>
-                                <Link href="/services-detail" className="my-8 inline-block text-[22px] font-extrabold text-black ">
-                                    UI/UX Design
+                                <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR" className="my-8 inline-block text-[22px] font-extrabold text-black ">
+                                    Google Ads Management
                                 </Link>
                                 <p className="mb-10 text-lg font-semibold transition line-clamp-3 ">
                                     We provide services with the best designs than our designer team for your business.
