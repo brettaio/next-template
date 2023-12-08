@@ -106,7 +106,7 @@ const Footer = () => {
                                     +1 (519) 521-4260
                                 </a>
                             </li>
-                            <div className="flex items-center gap-3 text-center">
+                            {/*<div className="flex items-center gap-3">
                                 <Link href="#" className="group">
                                     <svg
                                         width="10"
@@ -161,7 +161,7 @@ const Footer = () => {
                                         <circle cx="17.7975" cy="5.08737" r="0.732875" fill="currentColor" />
                                     </svg>
                                 </Link>
-                            </div>
+    </div>*/}
                         </ul>
                     </div>
                 </div>
