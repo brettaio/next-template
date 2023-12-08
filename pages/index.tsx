@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import Testimonial from '../components/Testimonial';
-import { useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 import CounterComponent from '../components/CounterComponent';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -93,7 +93,7 @@ const Index = () => {
                                         />
                                     </svg>
                                 </div>
-                                <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR" className="my-8 inline-block text-[22px] font-extrabold text-black ">
+                                <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy" className="my-8 inline-block text-[22px] font-extrabold text-black ">
                                     Weekly Google Ads Management
                                 </Link>
                                 <p className="line-clamp-7 mb-10 text-lg font-semibold transition ">{why1}</p>
@@ -616,7 +616,7 @@ const Index = () => {
                     </div>
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         <div className="group cursor-pointer text-center">
-                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                            <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy">
                                 <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <Image
                                         src="/assets/images/brettacuz.png"
@@ -630,7 +630,7 @@ const Index = () => {
                             </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                            <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy">
                                 <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <Image
                                         src="/assets/images/brettacuz.png"
@@ -644,7 +644,7 @@ const Index = () => {
                             </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                            <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy">
                                 <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <Image
                                         src="/assets/images/brettacuz.png"
@@ -658,7 +658,7 @@ const Index = () => {
                             </Link>
                         </div>
                         <div className="group cursor-pointer text-center">
-                            <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                            <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy">
                                 <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <Image
                                         src="/assets/images/brettacuz.png"

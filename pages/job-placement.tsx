@@ -1,17 +1,18 @@
+/* eslint-disable max-len */
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const JobPlacement = () => {
     const [activeTab, setActiveTab] = useState<string>('all-jobs');
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     return (
         <div>
@@ -135,7 +136,7 @@ const JobPlacement = () => {
                     <div className="flex flex-col gap-8 lg:flex-row lg:gap-0">
                         <div className="text-center text-white lg:mt-40 ltr:lg:text-left rtl:lg:text-right">
                             <h2 className="text-4xl font-black sm:text-6xl sm:leading-[75px]">
-                                Get Your <span className="text-secondary">Developers</span> Job With Plurk.
+                                Get Your <span className="text-secondary">Developers</span> Job With Bretta.
                             </h2>
                             <p className="mt-5 text-lg font-semibold lg:max-w-[493px]">
                                 Jobs is a curated job board of the best jobs for developers, designers and marketers in the tech industry.
@@ -167,7 +168,7 @@ const JobPlacement = () => {
                             </div>
                         </div>
                         <div className="mx-auto w-full max-w-[482px]">
-                            <img src="/assets/images/job/bannerimg.png" className="rtl:rotate-y-180" data-aos="fade-up" data-aos-duration="1000" alt="" />
+                            <Image src="/assets/images/job/bannerimg.png" className="rtl:rotate-y-180" data-aos="fade-up" data-aos-duration="1000" alt="" />
                         </div>
                     </div>
                 </div>
@@ -201,8 +202,6 @@ const JobPlacement = () => {
                                     slidesPerView: 6,
                                 },
                             }}
-                            dir={isRtl ? 'rtl' : 'ltr'}
-                            key={isRtl ? 'true' : 'false'}
                         >
                             <SwiperSlide>
                                 <Link href="#" className="flex items-center gap-3">
@@ -618,7 +617,7 @@ const JobPlacement = () => {
                     <div className="projects mt-12 grid grid-cols-1 gap-[15px] sm:grid-cols-2 lg:grid-cols-3" data-aos="flip-left" data-aos-duration="1000">
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'technology' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/dribbble.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/dribbble.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Dribbble</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Customer Support Agent</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -632,7 +631,7 @@ const JobPlacement = () => {
                         </div>
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'transportation' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/dell.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/dell.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Dell</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Software Engineer</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -646,7 +645,7 @@ const JobPlacement = () => {
                         </div>
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'marketing' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/apple.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/apple.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Apple</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Senior Product Designer</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -660,7 +659,7 @@ const JobPlacement = () => {
                         </div>
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'sales' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/dell.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/dell.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Dell</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Software Engineer</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -674,7 +673,7 @@ const JobPlacement = () => {
                         </div>
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'technology' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/apple.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/apple.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Apple</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Senior Product Designer</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -688,7 +687,7 @@ const JobPlacement = () => {
                         </div>
                         <div className={`project ${activeTab === 'all-jobs' || activeTab === 'marketing' ? 'block' : 'hidden'}`}>
                             <div className="project relative rounded-xl bg-white py-9 text-center dark:bg-white/10">
-                                <img src="/assets/images/job/dribbble.svg" className="mx-auto" alt="" />
+                                <Image src="/assets/images/job/dribbble.svg" className="mx-auto" alt="" />
                                 <h5 className="mt-[14px] text-base font-medium text-black dark:text-white">Dribbble</h5>
                                 <h3 className="mt-5 text-xl font-bold text-secondary">Customer Support Agent</h3>
                                 <p className="mt-[14px] text-base font-semibold">
@@ -717,24 +716,24 @@ const JobPlacement = () => {
                                 Make the most of <span className="text-primary">growth opportunities</span>
                             </h3>
                             <p className="text-lg font-medium">
-                                Our have to be burning with an idea, or a problem, or a wrong that you want to right. If you're not passionate enough from the
-                                start, you'll never stick it out.
+                                Our have to be burning with an idea, or a problem, or a wrong that you want to right. If you are not passionate enough from the
+                                start, you will never stick it out.
                             </p>
                             <ul className="space-y-5 text-lg font-medium">
                                 <li className="flex items-center gap-3">
-                                    <img src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
+                                    <Image src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
                                     <span>Donec bibendum nulla vehicula.</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <img src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
+                                    <Image src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
                                     <span>Proin congue nisl, quis pellentesque.</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <img src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
+                                    <Image src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
                                     <span>Ut accumsan dignissim gravida</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <img src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
+                                    <Image src="/assets/images/job/right-arrow.svg" alt="" className="rtl:rotate-y-180" />
                                     <span>Mauris faucibus a augue.</span>
                                 </li>
                             </ul>
@@ -742,14 +741,22 @@ const JobPlacement = () => {
                         <div className="mx-auto grid items-center gap-4 sm:grid-cols-2">
                             <div className="space-y-4">
                                 <div className="group h-[225px] overflow-hidden rounded-xl">
-                                    <img src="/assets/images/job/growth1.jpg" className="h-full w-full object-cover transition group-hover:scale-110" alt="" />
+                                    <Image
+                                        src="/assets/images/job/growth1.jpg"
+                                        className="h-full w-full object-cover transition group-hover:scale-110"
+                                        alt=""
+                                    />
                                 </div>
                                 <div className="group h-[225px] overflow-hidden rounded-xl">
-                                    <img src="/assets/images/job/growth2.jpg" className="h-full w-full object-cover transition group-hover:scale-110" alt="" />
+                                    <Image
+                                        src="/assets/images/job/growth2.jpg"
+                                        className="h-full w-full object-cover transition group-hover:scale-110"
+                                        alt=""
+                                    />
                                 </div>
                             </div>
                             <div className="group h-[345px] overflow-hidden rounded-xl">
-                                <img src="/assets/images/job/growth3.jpg" className="h-full w-full object-cover transition group-hover:scale-110" alt="" />
+                                <Image src="/assets/images/job/growth3.jpg" className="h-full w-full object-cover transition group-hover:scale-110" alt="" />
                             </div>
                         </div>
                     </div>
@@ -760,7 +767,7 @@ const JobPlacement = () => {
                 <div className="container">
                     <div className="flex flex-col gap-5 lg:flex-row" data-aos="fade-up" data-aos-duration="1000">
                         <div className="relative rounded-xl bg-primary">
-                            <img src="/assets/images/job/card1.png" className="h-[300px] sm:h-auto" alt="" />
+                            <Image src="/assets/images/job/card1.png" className="h-[300px] sm:h-auto" alt="" />
                             <div className="absolute top-1/2 left-6 right-6 -translate-y-1/2 sm:left-14 sm:right-[74px]">
                                 <h5 className="text-2xl font-bold text-white sm:text-[40px] sm:leading-[50px]">Post a featured job</h5>
                                 <p className="mt-[14px] text-base font-semibold text-white">
@@ -773,7 +780,7 @@ const JobPlacement = () => {
                             </div>
                         </div>
                         <div className="relative rounded-xl bg-secondary">
-                            <img src="/assets/images/job/card2.png" className="h-[300px] sm:h-auto" alt="" />
+                            <Image src="/assets/images/job/card2.png" className="h-[300px] sm:h-auto" alt="" />
                             <div className="absolute top-1/2 left-6 right-6 -translate-y-1/2 sm:left-14 sm:right-[74px]">
                                 <h5 className="text-2xl font-bold text-white sm:text-[40px] sm:leading-[50px]">Post a free job</h5>
                                 <p className="mt-[14px] text-base font-semibold text-white">
@@ -804,7 +811,7 @@ const JobPlacement = () => {
                     </div>
                     <div className="mt-12 grid gap-5 md:grid-cols-2">
                         <div className="relative overflow-hidden rounded-[10px] md:h-[545px]">
-                            <img src="/assets/images/job/blog1.jpg" alt="" className="h-full w-full object-cover" />
+                            <Image src="/assets/images/job/blog1.jpg" alt="" className="h-full w-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#000]"></div>
                             <div className="absolute bottom-12 px-4 text-center text-white">
                                 <p className="text-[12px] font-semibold">April 30, 2020 / Announcement</p>
@@ -815,7 +822,7 @@ const JobPlacement = () => {
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-[10px] md:h-[545px]">
-                            <img src="/assets/images/job/blog2.jpg" alt="" className="h-full w-full object-cover" />
+                            <Image src="/assets/images/job/blog2.jpg" alt="" className="h-full w-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#000]"></div>
                             <div className="absolute bottom-12 px-4 text-center text-white">
                                 <p className="text-[12px] font-semibold">April 30, 2020 / Announcement</p>
@@ -836,14 +843,14 @@ const JobPlacement = () => {
                             <h6>Get In Touch.</h6>
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
                             <div className="mx-auto mt-5 overflow-hidden">
-                                <img
+                                <Image
                                     src="/assets/images/form-light-img.svg"
                                     alt="form-img"
                                     className="mx-auto block dark:hidden"
                                     data-aos="fade-right"
                                     data-aos-duration="1000"
                                 />
-                                <img
+                                <Image
                                     src="/assets/images/form-dark-img.svg"
                                     alt="form-img"
                                     className="mx-auto hidden dark:block"

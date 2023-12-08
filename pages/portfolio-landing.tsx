@@ -1,13 +1,16 @@
+/* eslint-disable max-len */
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import Testimonial from '../components/Testimonial';
 import { useState } from 'react';
 import LogoSlider from '../components/LogoSlider';
+import Image from 'next/image';
 
 const PortfolioLanding = () => {
     const [activeTab, setActiveTab] = useState<string>('all');
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
+    const portfolioText = `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
+    injected humour, or randomised words which don't look even slightly believable.`;
 
     const feedbacks = [
         {
@@ -24,7 +27,7 @@ const PortfolioLanding = () => {
         <div>
             <section className="relative">
                 <div className="h-[450px] w-full md:h-[550px] lg:h-[728px]">
-                    <img src="/assets/images/portfolio-2/portfolio-banner-min.jpg" className="h-full w-full object-cover" alt="" />
+                    <Image src="/assets/images/portfolio-2/portfolio-banner-min.jpg" className="h-full w-full object-cover" alt="" />
                 </div>
                 <div className="absolute inset-0 z-[1] bg-black/90"></div>
                 <div className="absolute inset-x-0 top-1/2 z-[1] -translate-y-1/2">
@@ -46,7 +49,7 @@ const PortfolioLanding = () => {
 
             <section className="relative mt-12 pb-12 lg:mt-24 lg:pb-24">
                 <div className="absolute inset-y-0 right-0 h-full xl:w-3/5">
-                    <img src="/assets/images/portfolio-2/beautiful-brands.png" className="h-full w-full object-cover" alt="" />
+                    <Image src="/assets/images/portfolio-2/beautiful-brands.png" className="h-full w-full object-cover" alt="" />
                 </div>
                 <div className="container">
                     <div className="relative z-[1]">
@@ -56,10 +59,7 @@ const PortfolioLanding = () => {
                         <h2 className="text-[64px] font-extrabold leading-[60px] text-primary sm:text-8xl lg:text-[180px] lg:leading-[225px]">Beautiful</h2>
                         <div className="flex flex-col justify-between md:flex-row">
                             <div className="order-2 mt-5 md:order-1 md:mt-0">
-                                <p className="text-center text-lg font-normal sm:text-left">
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                                    injected humour, or randomised words which don't look even slightly believable.
-                                </p>
+                                <p className="text-center text-lg font-normal sm:text-left">{portfolioText}</p>
                                 <div className="text-center md:text-left">
                                     <Link
                                         href="/about-us"
@@ -141,100 +141,100 @@ const PortfolioLanding = () => {
                     <div className={`project ${activeTab === 'all' || activeTab === 'branding' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio1.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio1.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio6.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio6.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'designing' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio2.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio2.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio7.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio7.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'photography' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio3.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio3.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio8.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio8.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'development' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio4.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio4.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio9.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio9.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'branding' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio5.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio5.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio10.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio10.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'designing' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio11.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio11.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio16.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio16.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'photography' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio12.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio12.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio17.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio17.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'development' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio13.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio13.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio18.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio18.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'branding' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio14.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio14.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio19.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio19.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className={`project ${activeTab === 'all' || activeTab === 'designing' ? 'block' : 'hidden'}`}>
                         <div className="project space-y-2">
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio15.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio15.jpg" alt="" />
                             </Link>
                             <Link href="#" className="flex">
-                                <img className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio20.jpg" alt="" />
+                                <Image className="h-full w-full object-cover" src="/assets/images/portfolio-2/portfolio20.jpg" alt="" />
                             </Link>
                         </div>
                     </div>
@@ -390,7 +390,7 @@ const PortfolioLanding = () => {
                         <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
                             <h6>Get In Touch.</h6>
                             <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
-                            <img src="/assets/images/form-img.png" alt="form-img" className="mx-auto" data-aos="fade-right" data-aos-duration="1000" />
+                            <Image src="/assets/images/form-img.png" alt="form-img" className="mx-auto" data-aos="fade-right" data-aos-duration="1000" />
                         </div>
                         <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">

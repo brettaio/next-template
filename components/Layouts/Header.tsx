@@ -45,7 +45,7 @@ const Header = (props: any) => {
                                         Home
                                     </Link>
                                 </li>
-                                <li className="group relative" onClick={(e) => e.stopPropagation()}>
+                                {/*<li className="group relative" onClick={(e) => e.stopPropagation()}>
                                     <Link
                                         href="#"
                                         className={
@@ -174,38 +174,34 @@ const Header = (props: any) => {
                                             Restaurant
                                         </Link>
                                     </div>
-                                </li>
+                                </li>*/}
+
                                 <li>
-                                    <Link
-                                        href="/portfolio"
-                                        className={router.pathname === '/portfolio' || router.pathname === '/portfolio-detail' ? 'active' : ''}
-                                    >
-                                        Portfolio
+                                    <Link href="/landing-page-experiences" className={router.pathname === '/landing-page-experiences' ? 'active' : ''}>
+                                        Landing Page Experiences
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="/services"
-                                        className={router.pathname === '/services' || router.pathname === '/services-detail' ? 'active' : ''}
-                                    >
-                                        Service
+                                    <Link href="/google-ads-management" className={router.pathname === '/google-ads-management' ? 'active' : ''}>
+                                        Google Ads Management
                                     </Link>
                                 </li>
-                                <li>
+                                {/*<li>
                                     <Link href="/team" className={router.pathname === '/team' ? 'active' : ''}>
                                         Team
                                     </Link>
-                                </li>
+                                </li> */}
+
                                 <li>
                                     <Link href="/about-us" className={router.pathname === '/about-us' ? 'active' : ''}>
-                                        About Us
+                                        Who Is Bretta Etc?
                                     </Link>
                                 </li>
-                                <li>
+                                {/*<li>
                                     <Link href="/career" className={router.pathname === '/career' ? 'active' : ''}>
                                         Career
                                     </Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
 

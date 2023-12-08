@@ -1,17 +1,40 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import Head from 'next/head';
-import { IRootState } from '../store';
+import Image from 'next/image';
+import applicationExample from '../public/assets/images/application-example.png';
+import blogExample from '../public/assets/images/blog-example.png';
+import consultingExample from '../public/assets/images/consulting-example.png';
+import constructionExample from '../public/assets/images/construction-example.png';
+import creativeAgencyExample from '../public/assets/images/creative-agency-example.png';
+import cryptoCurrencyExample from '../public/assets/images/crypto-currency-example.png';
+import eventConcertExample from '../public/assets/images/concert-example.png';
+import gymExample from '../public/assets/images/gym-example.png';
+import healthCareExample from '../public/assets/images/health-care-example.png';
+import hotelResortExample from '../public/assets/images/hotel-resort-example.png';
+import insuranceExample from '../public/assets/images/insurance-example.png';
+import jobPlacementExample from '../public/assets/images/job-placement-example.png';
+import salesMarketingExample from '../public/assets/images/sales-marketing-example.png';
+import modernSaasExample from '../public/assets/images/modern-saas-example.png';
+import nftMarketplaceExample from '../public/assets/images/nft-marketplace-example.png';
+import onlineCoursesExample from '../public/assets/images/online-courses-example.png';
+import onlinePaymentsExample from '../public/assets/images/online-payments-example.png';
+import personalPortfolioExample from '../public/assets/images/personal-portfolio-example.png';
+import photographyExample from '../public/assets/images/photography-example.png';
+import portfolioExample from '../public/assets/images/portfolio-example.png';
+import realEstateExample from '../public/assets/images/real-estate-example.png';
+import restaurantExample from '../public/assets/images/restaurant-example.png';
 
-const Portfolio = () => {
+const LandingPageExperiences = () => {
     const [activeTab, setActiveTab] = useState<string>('all');
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
+    const heroText1 = `Fast Websites Expedite Paid Advertising Success`;
+    const heroText2 = `These Examples Require Licensing To Reproduce. I Run, Update & Edit. `;
 
     return (
         <div>
             <Head>
-                <title>Portfolio | Plurk – Tailwind CSS Multipurpose Landing Templates</title>
+                <title> Landing Page Experiences | Bretta Etc Ltd. Google Ad Management & Licensed Templates</title>
             </Head>
             <div>
                 <div className="bg-[url(/assets/images/inner-page-hero-bg.png)] bg-cover bg-bottom bg-no-repeat pt-[82px] lg:pt-[106px]">
@@ -19,10 +42,10 @@ const Portfolio = () => {
                         <div className="container">
                             <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
                                 <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right">
-                                    <h6>Our Project</h6>
-                                    <h4 className="!text-white">Some of our finest work.</h4>
+                                    <h6>{heroText1}</h6>
+                                    <h4 className="!text-white">{heroText2}</h4>
                                 </div>
-                                <div className="relative" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
+                                <div className="relative" data-aos="fade-left" data-aos-duration="1000">
                                     <svg
                                         width="302"
                                         height="300"
@@ -508,8 +531,8 @@ const Portfolio = () => {
 
                 <section className="pt-12 pb-14 md:pb-[100px]">
                     <div className="container">
-                        <div className="overflow-x-auto">
-                            <ul className="filters portfolio-filter mx-auto flex w-max gap-7 whitespace-nowrap pb-2.5 font-bold dark:text-white">
+                        {/*<div className="overflow-x-auto">
+                            <ul className="filters portfolio-filter mx-auto flex w-max gap-7 whitespace-nowrap pb-2.5 font-bold">
                                 <li className={`filter ${activeTab === 'all' ? 'active' : ''}`}>
                                     <button
                                         type="button"
@@ -565,125 +588,203 @@ const Portfolio = () => {
                                     </button>
                                 </li>
                             </ul>
-                        </div>
+    </div>*/}
                         <div className="projects mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                             <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-1.png" alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/application" className="absolute top-0 h-full w-full left-0"></Link>
+                                    <Image src={applicationExample} alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Space Landing page</h6>
-                                        <p>Website</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
-                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-2.png" alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
-                                    <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Crypto Game - UX Interface</h6>
-                                        <p>Website, App</p>
+                                        <h6 className="mb-1 text-black ">Application Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-3.png" alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/blog" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={blogExample} alt="project-2" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Looking for a quiet place</h6>
-                                        <p>Website</p>
+                                        <h6 className="mb-1 text-black ">Blog Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-4.png" alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/consulting" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={consultingExample} alt="project-3" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">WeTour - Travel Hero Illustration</h6>
-                                        <p>Website</p>
+                                        <h6 className="mb-1 text-black ">Consulting Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/construction" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={constructionExample} alt="project-4" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Construction Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-5.png" alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/creative-agency" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={creativeAgencyExample} alt="project-5" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Digital Art Guide</h6>
-                                        <p>Branding</p>
+                                        <h6 className="mb-1 text-black ">Creative Agency Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-6.png" alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/crypto" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={cryptoCurrencyExample} alt="project-6" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Frozeverse - 3D and motion design</h6>
-                                        <p>Branding, Website, App</p>
+                                        <h6 className="mb-1 text-black ">Crypto Currency Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-7.png" alt="project-7" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/event-concert" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={eventConcertExample} alt="project-7" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Space Landing page</h6>
-                                        <p>Website</p>
+                                        <h6 className="mb-1 text-black ">Event Concert Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'app' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-8.png" alt="project-8" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/gym" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={gymExample} alt="project-8" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Crypto Game - UX Interface</h6>
-                                        <p>Website, App</p>
+                                        <h6 className="mb-1 text-black ">Gym Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'website' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-9.png" alt="project-9" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/healthcare" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={healthCareExample} alt="project-9" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Looking for a quiet place</h6>
-                                        <p>Website</p>
+                                        <h6 className="mb-1 text-black ">Health Care Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'application' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-10.png" alt="project-10" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/hotel-resort" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={hotelResortExample} alt="project-10" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">WeTour - Travel Hero Illustration</h6>
-                                        <p>Website</p>
+                                        <h6 className="mb-1 text-black ">Hotel & Resort Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'design' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-11.png" alt="project-11" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/insurance" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={insuranceExample} alt="project-11" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Digital Art Guide</h6>
-                                        <p>Branding</p>
+                                        <h6 className="mb-1 text-black ">Insurance Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
                             <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
                                 <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
-                                    <Link href="/portfolio-detail" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                    <img src="/assets/images/project-12.png" alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <Link href="/job-placement" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={jobPlacementExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
                                     <div className="p-5 text-sm font-bold">
-                                        <h6 className="mb-1 text-black dark:text-white">Frozeverse - 3D and motion design</h6>
-                                        <p>Branding, Website, App</p>
+                                        <h6 className="mb-1 text-black ">Job Placement Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/marketing" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={salesMarketingExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Sales Marketing Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/modern-saas" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={modernSaasExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Modern Saas Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/nft" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={nftMarketplaceExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">NFT Marketplace Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/online-courses" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={onlineCoursesExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Online Courses Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/online-payments" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={onlinePaymentsExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Online Payments Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/personal-portfolio" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={personalPortfolioExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Personal Portfolio Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/photography" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={photographyExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Photography Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/portfolio-landing" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={portfolioExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Portfolio Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/real-estate" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={realEstateExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Real Estate Landing Page Example</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`project ${activeTab === 'all' || activeTab === 'ecommerce' ? 'block' : 'hidden'}`}>
+                                <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark dark:drop-shadow-none">
+                                    <Link href="/restaurant" className="absolute top-0 h-full w-full left-0 "></Link>
+                                    <Image src={restaurantExample} alt="project-12" className="h-52 w-full rounded-t-3xl object-cover" />
+                                    <div className="p-5 text-sm font-bold">
+                                        <h6 className="mb-1 text-black ">Restaurant Landing Page Example</h6>
                                     </div>
                                 </div>
                             </div>
@@ -695,4 +796,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default LandingPageExperiences;

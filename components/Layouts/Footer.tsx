@@ -26,53 +26,18 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/portfolio" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Portfolio
+                                <Link href="/landing-page-experiences" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    Landing Page Experiences
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Service
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/team" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Team
+                                <Link href="/google-ads-management" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    Google Ads Management
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/about-us" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/career" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Career
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex flex-col gap-3 text-center font-bold">
-                            <li className="mb-3 text-lg font-extrabold text-black">Ready Made Pages</li>
-                            <li>
-                                <Link href="/crypto" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Crypto
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/modern-saas" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Modern Saas
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/real-estate" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Real Estate
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/services-detail" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    App Development
+                                    Who Is Bretta Etc?
                                 </Link>
                             </li>
                         </ul>
@@ -104,8 +69,9 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="flex flex-col gap-3 text-center font-bold">
-                            <li className="mb-3 text-lg font-extrabold text-black">Information</li>
+                            <li className="mb-3 text-lg font-extrabold text-black">Where We At:</li>
                             <li>London, Ontario, Canada</li>
+                            <li>Brisbane, Queensland, Australia</li>
                             <li>
                                 <a href="tel:+(617) 254-2333" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     +1 (519) 521-4260

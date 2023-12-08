@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import CounterComponent from '../components/CounterComponent';
 import Testimonial from '../components/Testimonial';
 import ProjectSlider from '../components/ProjectSlider';
@@ -5,16 +6,14 @@ import Modal from '../components/Modal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay, Virtual } from 'swiper';
+import { Navigation, Autoplay, Virtual } from 'swiper/modules';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
+import Image from 'next/image';
 
-const Services = () => {
+const GoogleAdsManagement = () => {
     const dialog: any = useRef();
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     return (
         <div>
@@ -29,7 +28,7 @@ const Services = () => {
                                 <h6>Services</h6>
                                 <h4 className="!text-white">High - Impact Services</h4>
                             </div>
-                            <div className="relative mt-6 md:mt-0" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
+                            <div className="relative mt-6 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
                                 <svg
                                     width="296"
                                     height="282"
@@ -554,7 +553,7 @@ const Services = () => {
                             <p className="pt-5 text-lg font-semibold">
                                 Find out everything you need to know and more about how we create our business process models. There are many variations of
                                 passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.
+                                words which do not look even slightly believable.
                             </p>
                         </div>
                         <div className="grid gap-4 rounded-[32px] sm:grid-cols-2 sm:gap-0">
@@ -684,14 +683,18 @@ const Services = () => {
 
             <section className="overflow-x-hidden bg-gradient-to-t from-white/[55%] to-transparent dark:bg-none md:py-14 lg:pb-[100px] lg:pt-[130px]">
                 <div className="relative bg-center">
-                    <img
+                    <Image
                         src="/assets/images/how-we-do-it_.png"
                         alt="how-we-do-it"
+                        height={256}
+                        width={256}
                         className="absolute inset-x-0 bottom-[93%] mx-auto hidden md:block xl:bottom-[91%]"
                     />
-                    <img
+                    <Image
                         src="/assets/images/service-video-bg.png"
                         alt="service-video-bg"
+                        width={256}
+                        height={256}
                         className="relative z-[1] h-[400px] w-full object-cover object-top sm:h-[500px] lg:h-[738px]"
                     />
                     <div className="absolute -inset-x-4 bottom-0 h-12 -rotate-[2deg] bg-[#7780A1]/10 xl:bottom-3"></div>
@@ -1199,8 +1202,6 @@ const Services = () => {
                                 slidesPerView: 8,
                             },
                         }}
-                        dir={isRtl ? 'rtl' : 'ltr'}
-                        key={isRtl ? 'true' : 'false'}
                     >
                         <SwiperSlide>
                             <Link href="#" className="flex items-center gap-3">
@@ -1438,8 +1439,14 @@ const Services = () => {
 
             <section className="relative overflow-x-hidden border-t-2 border-transparent px-4 py-14 dark:border-gray/20 lg:py-[100px]">
                 <div className="items-center justify-center gap-10 lg:flex">
-                    <div className="text-center" data-aos={isRtl ? 'fade-left' : 'fade-right'} data-aos-duration="1000">
-                        <img src="/assets/images/services-form-txt.png" alt="services-form-txt" className="mx-auto mb-10 sm:pt-4 xl:mx-0" />
+                    <div className="text-center" data-aos="fade-right" data-aos-duration="1000">
+                        <Image
+                            src="/assets/images/services-form-txt.png"
+                            alt="services-form-txt"
+                            className="mx-auto mb-10 sm:pt-4 xl:mx-0"
+                            height={256}
+                            width={256}
+                        />
                         <form action="" className="relative z-[1] text-center lg:pt-[50px]">
                             <div className="relative inline-block w-full sm:w-auto">
                                 <input
@@ -1456,7 +1463,7 @@ const Services = () => {
                             </div>
                         </form>
                     </div>
-                    <div className="mt-10 lg:mt-0" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
+                    <div className="mt-10 lg:mt-0" data-aos="fade-left" data-aos-duration="1000">
                         <svg
                             width="320"
                             height="282"
@@ -1729,4 +1736,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default GoogleAdsManagement;
