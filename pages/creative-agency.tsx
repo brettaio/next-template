@@ -1,5 +1,5 @@
 import 'swiper/css';
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CountUp from 'react-countup';
 import { useSelector } from 'react-redux';

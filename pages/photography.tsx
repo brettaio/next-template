@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
 import 'swiper/css/navigation';

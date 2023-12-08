@@ -4,7 +4,7 @@ import Faq from '../components/Faq';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay, Virtual } from 'swiper';
+import { Navigation, Autoplay, Virtual } from 'swiper/modules';
 import BlogSlider from '../components/BlogSlider';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Navigation, Autoplay, Virtual } from 'swiper';
+import { Navigation, Autoplay, Virtual } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import Testimonial from '../components/Testimonial';

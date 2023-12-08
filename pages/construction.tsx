@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
@@ -12,6 +13,7 @@ import { IRootState } from '../store';
 import Faq from '../components/Faq';
 import Testimonial from '../components/Testimonial';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const items = [
     '/assets/images/construction/project1.jpg',
@@ -63,7 +65,7 @@ const Construction = () => {
                             </Link>
                         </div>
                         <div>
-                            <img src="/assets/images/construction/banner-img.png" data-aos="fade-up" data-aos-duration="1000" alt="" />
+                            <Image src="/assets/images/construction/banner-img.png" data-aos="fade-up" data-aos-duration="1000" alt="" />
                         </div>
                     </div>
                 </div>
@@ -266,7 +268,7 @@ const Construction = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project1.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project1.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -296,7 +298,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project2.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project2.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -326,7 +328,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project3.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project3.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -356,7 +358,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project4.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project4.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -386,7 +388,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project5.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project5.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -416,7 +418,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project6.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project6.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -446,7 +448,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project7.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project7.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -476,7 +478,7 @@ const Construction = () => {
                     </div>
                     <div className="group">
                         <div className="relative overflow-hidden">
-                            <img src="/assets/images/construction/project8.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
+                            <Image src="/assets/images/construction/project8.jpg" className="duration-200 group-hover:rotate-2 group-hover:scale-110" alt="" />
                             <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center bg-black/60 text-white transition duration-700 group-hover:scale-100">
                                 <Link
                                     href="#"
@@ -600,28 +602,28 @@ const Construction = () => {
                     >
                         <SwiperSlide className="relative">
                             <div className="overflow-hidden rounded-3xl">
-                                <img src="/assets/images/construction/team1.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/construction/team1.jpg" className="h-full w-full object-cover" alt="" />
                             </div>
                             <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Oscar Helman</h3>
                             <p className="mt-2.5 text-sm font-semibold">Founder & CEO</p>
                         </SwiperSlide>
                         <SwiperSlide className="relative">
                             <div className="overflow-hidden rounded-3xl">
-                                <img src="/assets/images/construction/team2.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/construction/team2.jpg" className="h-full w-full object-cover" alt="" />
                             </div>
                             <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">James Hoult</h3>
                             <p className="mt-2.5 text-sm font-semibold">Founder & CEO'</p>
                         </SwiperSlide>
                         <SwiperSlide className="relative">
                             <div className="overflow-hidden rounded-3xl">
-                                <img src="/assets/images/construction/team3.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/construction/team3.jpg" className="h-full w-full object-cover" alt="" />
                             </div>
                             <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Steve johnson</h3>
                             <p className="mt-2.5 text-sm font-semibold">Project Manager</p>
                         </SwiperSlide>
                         <SwiperSlide className="relative">
                             <div className="overflow-hidden rounded-3xl">
-                                <img src="/assets/images/construction/team4.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/construction/team4.jpg" className="h-full w-full object-cover" alt="" />
                             </div>
                             <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Amy reacher</h3>
                             <p className="mt-2.5 text-sm font-semibold">Dentist</p>
@@ -649,7 +651,7 @@ const Construction = () => {
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-duration="1000">
                         <div className="group relative overflow-hidden rounded-xl border-2 border-transparent duration-200 hover:border-secondary">
                             <Link href="#" className="absolute inset-0 h-full w-full"></Link>
-                            <img src="/assets/images/construction/news1.jpg" alt="" />
+                            <Image src="/assets/images/construction/news1.jpg" alt="" />
                             <div className="space-y-[14px] bg-white px-4 py-5 group-hover:bg-secondary/20 dark:bg-gray-dark">
                                 <p className="text-base font-semibold">November 28, 2022</p>
                                 <h5 className="text-xl font-extrabold text-black hover:text-secondary dark:text-white">FUTURE PROOFING HOSPITALS</h5>
@@ -658,7 +660,7 @@ const Construction = () => {
                         </div>
                         <div className="group relative overflow-hidden rounded-xl border-2 border-transparent duration-200 hover:border-secondary">
                             <Link href="#" className="absolute inset-0 h-full w-full"></Link>
-                            <img src="/assets/images/construction/news2.jpg" alt="" />
+                            <Image src="/assets/images/construction/news2.jpg" alt="" />
                             <div className="space-y-[14px] bg-white p-5 group-hover:bg-secondary/20 dark:bg-gray-dark">
                                 <p className="text-base font-semibold">November 28, 2022</p>
                                 <h5 className="text-xl font-extrabold text-black dark:text-white">BIKE PARTS WAREHOUSE, DE</h5>
@@ -667,7 +669,7 @@ const Construction = () => {
                         </div>
                         <div className="group relative overflow-hidden rounded-xl border-2 border-transparent duration-200 hover:border-secondary">
                             <Link href="#" className="absolute inset-0 h-full w-full"></Link>
-                            <img src="/assets/images/construction/news3.jpg" alt="" />
+                            <Image src="/assets/images/construction/news3.jpg" alt="" />
                             <div className="space-y-[14px] bg-white p-5 group-hover:bg-secondary/20 dark:bg-gray-dark">
                                 <p className="text-base font-semibold">November 28, 2022</p>
                                 <h5 className="text-xl font-extrabold text-black dark:text-white">JOY HOTEL & CASINO</h5>

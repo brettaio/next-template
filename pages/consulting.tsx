@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import LogoSlider from '../components/LogoSlider';
@@ -5,17 +6,17 @@ import Testimonial from '../components/Testimonial';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay} from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 import CountUp from 'react-countup';
 import Modal from '../components/Modal';
 import { useState, useRef } from 'react';
 import AnimateHeight from 'react-animate-height';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Consulting = () => {
     const dialog: any = useRef();
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     const feedbacks = [
         {
@@ -73,16 +74,16 @@ const Consulting = () => {
                             </p>
                             <div className="flex items-center justify-center gap-5 md:justify-start">
                                 <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-primary/50 duration-200 hover:bg-black">
-                                    <img src="/assets/images/consulting/banner-icon1.svg" alt="" />
+                                    <Image src="/assets/images/consulting/banner-icon1.svg" alt="" />
                                 </div>
                                 <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-primary/50 duration-200 hover:bg-black">
-                                    <img src="/assets/images/consulting/banner-icon2.svg" alt="" />
+                                    <Image src="/assets/images/consulting/banner-icon2.svg" alt="" />
                                 </div>
                                 <Link
                                     href="#"
                                     className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-primary/50 duration-200 hover:bg-black"
                                 >
-                                    <img src="/assets/images/consulting/banner-icon3.svg" alt="" />
+                                    <Image src="/assets/images/consulting/banner-icon3.svg" alt="" />
                                 </Link>
                             </div>
                             <Link href="/contact-us" className="btn rounded-md bg-white">
@@ -90,7 +91,7 @@ const Consulting = () => {
                             </Link>
                         </div>
                         <div className="mx-auto w-full max-w-[435px]">
-                            <img src="/assets/images/consulting/banner-img.png" data-aos="fade-up" data-aos-duration="1000" alt="" />
+                            <Image src="/assets/images/consulting/banner-img.png" data-aos="fade-up" data-aos-duration="1000" alt="" />
                         </div>
                     </div>
                 </div>
@@ -107,19 +108,19 @@ const Consulting = () => {
                             <div className="grid grid-cols-3 gap-3 sm:gap-5 lg:grid-cols-1">
                                 <div className="rounded-[10px] bg-white py-4 px-6 text-center shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:bg-white/10 sm:py-[19px]">
                                     <span>
-                                        <img src="/assets/images/consulting/about-icon1.svg" className="mx-auto" alt="" />
+                                        <Image src="/assets/images/consulting/about-icon1.svg" className="mx-auto" alt="" />
                                     </span>
                                     <p className="text-b mt-2 font-semibold text-black dark:text-white sm:text-xl">Vision</p>
                                 </div>
                                 <div className="rounded-[10px] bg-white py-4 px-6 text-center shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:bg-white/10 sm:py-[19px]">
                                     <span>
-                                        <img src="/assets/images/consulting/about-icon2.svg" className="mx-auto" alt="" />
+                                        <Image src="/assets/images/consulting/about-icon2.svg" className="mx-auto" alt="" />
                                     </span>
                                     <p className="mt-2 font-semibold text-black dark:text-white sm:text-xl">Missions</p>
                                 </div>
                                 <div className="rounded-[10px] bg-white py-4 px-6 text-center shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:bg-white/10 sm:py-[19px]">
                                     <span>
-                                        <img src="/assets/images/consulting/about-icon3.svg" className="mx-auto" alt="" />
+                                        <Image src="/assets/images/consulting/about-icon3.svg" className="mx-auto" alt="" />
                                     </span>
                                     <p className="mt-2 font-semibold text-black dark:text-white sm:text-xl">Goals</p>
                                 </div>
@@ -127,7 +128,7 @@ const Consulting = () => {
                         </div>
                         <div className="grid flex-1 grid-cols-1 items-center gap-10 md:grid-cols-2">
                             <div>
-                                <img src="/assets/images/consulting/about-img.png" className="mx-auto" alt="" />
+                                <Image src="/assets/images/consulting/about-img.png" className="mx-auto" alt="" />
                             </div>
                             <div className="space-y-4 text-center ltr:md:text-left rtl:md:text-right">
                                 <h3 className="text-3xl font-black uppercase text-black dark:text-white sm:text-[40px] sm:leading-[60px]">
@@ -147,7 +148,7 @@ const Consulting = () => {
 
             <section className="relative bg-black py-12 dark:bg-white/5 lg:py-24">
                 <div className="absolute bottom-0 ltr:right-0 rtl:left-0">
-                    <img src="/assets/images/consulting/bg-icon.svg" className="rtl:rotate-y-180" alt="" />
+                    <Image src="/assets/images/consulting/bg-icon.svg" className="rtl:rotate-y-180" alt="" />
                 </div>
                 <div className="container relative z-[1]">
                     <div className="heading text-center text-white">
@@ -159,7 +160,7 @@ const Consulting = () => {
                     <div className="mt-10 grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3" data-aos="flip-left" data-aos-duration="1000">
                         <div className="group">
                             <div className="overflow-hidden">
-                                <img
+                                <Image
                                     src="/assets/images/consulting/services1.jpg"
                                     className="w-full duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -172,13 +173,13 @@ const Consulting = () => {
                                     It is a long established fact that a reader will be distracted by the readable content.
                                 </p>
                                 <span className="absolute bottom-0 opacity-20 ltr:right-0 rtl:left-0">
-                                    <img src="/assets/images/consulting/services-icon1.svg" alt="" />
+                                    <Image src="/assets/images/consulting/services-icon1.svg" alt="" />
                                 </span>
                             </div>
                         </div>
                         <div className="group">
                             <div className="overflow-hidden">
-                                <img
+                                <Image
                                     src="/assets/images/consulting/services2.jpg"
                                     className="w-full duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -191,13 +192,13 @@ const Consulting = () => {
                                     It is a long established fact that a reader will be distracted by the readable content.
                                 </p>
                                 <span className="absolute bottom-0 opacity-20 ltr:right-0 rtl:left-0">
-                                    <img src="/assets/images/consulting/services-icon2.svg" alt="" />
+                                    <Image src="/assets/images/consulting/services-icon2.svg" alt="" />
                                 </span>
                             </div>
                         </div>
                         <div className="group">
                             <div className="overflow-hidden">
-                                <img
+                                <Image
                                     src="/assets/images/consulting/services3.jpg"
                                     className="w-full duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -210,7 +211,7 @@ const Consulting = () => {
                                     It is a long established fact that a reader will be distracted by the readable content.
                                 </p>
                                 <span className="absolute bottom-0 opacity-20 ltr:right-0 rtl:left-0">
-                                    <img src="/assets/images/consulting/services-icon3.svg" alt="" />
+                                    <Image src="/assets/images/consulting/services-icon3.svg" alt="" />
                                 </span>
                             </div>
                         </div>
@@ -309,7 +310,7 @@ const Consulting = () => {
 
             <section className="relative bg-black py-14 dark:bg-gray-dark lg:py-[100px]">
                 <div className="absolute bottom-0 ltr:left-0 rtl:right-0">
-                    <img src="/assets/images/consulting/bg-icon.svg" className="rotate-y-180 rtl:rotate-0" alt="" />
+                    <Image src="/assets/images/consulting/bg-icon.svg" className="rotate-y-180 rtl:rotate-0" alt="" />
                 </div>
                 <div className="container">
                     <div className="heading text-center ltr:lg:text-left rtl:lg:text-right">
@@ -330,15 +331,13 @@ const Consulting = () => {
                                 prevEl: '.testimonial-swiper-button-prev',
                             }}
                             modules={[Navigation, Autoplay]}
-                            dir={isRtl ? 'rtl' : 'ltr'}
-                            key={isRtl ? 'true' : 'false'}
                             className="sm:py-12 md:py-0"
                         >
                             <SwiperSlide>
                                 <div className="items-center gap-4 sm:grid sm:grid-cols-3">
                                     <div className="col-span-2">
                                         <div className="relative rounded-3xl bg-gray-dark p-6 dark:bg-black">
-                                            <img
+                                            <Image
                                                 src="/assets/images/blue-quote.png"
                                                 alt="blue-quote"
                                                 className="absolute top-0 ltr:right-0 rtl:left-0 sm:-top-6 ltr:sm:-right-6 rtl:sm:-left-6"
@@ -369,7 +368,7 @@ const Consulting = () => {
                                             </div>
                                             <p className="relative font-medium italic text-white">
                                                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-                                                some form, by injected humour, or randomised words which don't look even slightly believable.
+                                                some form, by injected humour, or randomised words which do not look even slightly believable.
                                                 <span className="absolute -left-2 -top-2">
                                                     <svg width="100" height="73" viewBox="0 0 100 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <g opacity="0.05">
@@ -392,7 +391,7 @@ const Consulting = () => {
                                         </div>
                                     </div>
                                     <div className="mx-auto mt-4 h-20 w-20 max-w-[255px] overflow-hidden rounded-full bg-white ltr:ml-auto rtl:mr-auto dark:bg-gray-dark sm:mt-0 sm:h-auto sm:w-auto sm:rounded-[150px] ltr:sm:mr-0 rtl:sm:ml-0">
-                                        <img src="/assets/images/testimonial.png" alt="testimonial" className="h-full w-full object-cover object-top" />
+                                        <Image src="/assets/images/testimonial.png" alt="testimonial" className="h-full w-full object-cover object-top" />
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -444,7 +443,7 @@ const Consulting = () => {
                     </div>
                     <div className="flex flex-col items-center gap-5 sm:gap-10 lg:flex-row">
                         <div className="w-full max-w-[552px] flex-none">
-                            <img src="/assets/images/consulting/question-img.png" className="rtl:rotate-y-180" alt="" />
+                            <Image src="/assets/images/consulting/question-img.png" className="rtl:rotate-y-180" alt="" />
                         </div>
                         <div className="accordion-container flex-1">
                             {queries.map((faq: any, i: number) => {
@@ -586,7 +585,7 @@ const Consulting = () => {
                             data-aos-duration="1000"
                         >
                             <div className="overflow-hidden rounded-t-xl">
-                                <img src="/assets/images/consulting/knowledge1.jpg" className="rtl:rotate-y-180" alt="" />
+                                <Image src="/assets/images/consulting/knowledge1.jpg" className="rtl:rotate-y-180" alt="" />
                             </div>
                             <div className="overflow-hidden rounded-b-xl bg-white px-5 group-hover:bg-secondary/20 dark:bg-white/10">
                                 <h5 className="pt-[14px] text-lg font-extrabold text-black dark:text-white">
@@ -603,7 +602,7 @@ const Consulting = () => {
                             data-aos-duration="1000"
                         >
                             <div className="overflow-hidden rounded-t-xl">
-                                <img src="/assets/images/consulting/knowledge2.jpg" className="rtl:rotate-y-180" alt="" />
+                                <Image src="/assets/images/consulting/knowledge2.jpg" className="rtl:rotate-y-180" alt="" />
                             </div>
                             <div className="overflow-hidden rounded-b-xl bg-white px-5 group-hover:bg-secondary/20 dark:bg-white/10">
                                 <h5 className="pt-[14px] text-lg font-extrabold text-black dark:text-white">
@@ -620,7 +619,7 @@ const Consulting = () => {
                             data-aos-duration="1000"
                         >
                             <div className="overflow-hidden rounded-t-xl">
-                                <img src="/assets/images/consulting/knowledge3.jpg" className="rtl:rotate-y-180" alt="" />
+                                <Image src="/assets/images/consulting/knowledge3.jpg" className="rtl:rotate-y-180" alt="" />
                             </div>
                             <div className="overflow-hidden rounded-b-xl bg-white px-5 group-hover:bg-secondary/20 dark:bg-white/10">
                                 <h5 className="pt-[14px] text-lg font-extrabold text-black dark:text-white">Top IT Predictions for CIOs in the New Decade</h5>
@@ -637,14 +636,14 @@ const Consulting = () => {
                         <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
                             <h6>Get In Touch.</h6>
                             <h4 className="mb-6 sm:!leading-[50px]">Ready to Get Started?</h4>
-                            <img
+                            <Image
                                 src="/assets/images/form-light-img.svg"
                                 alt="form-img"
                                 className="mx-auto block dark:hidden"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"
                             />
-                            <img
+                            <Image
                                 src="/assets/images/form-dark-img.svg"
                                 alt="form-img"
                                 className="mx-auto hidden dark:block"

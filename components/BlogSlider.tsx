@@ -5,8 +5,6 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
 
 const BlogSlider = ({
     title1 = '',
@@ -40,8 +38,6 @@ const BlogSlider = ({
     type = 'service',
     className = '',
 }) => {
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
-
     return (
         <section className={`py-14 lg:py-[100px] ${className}`}>
             <div className="container">
@@ -117,8 +113,6 @@ const BlogSlider = ({
                             slidesPerView: 3,
                         },
                     }}
-                    dir={isRtl ? 'rtl' : 'ltr'}
-                    key={isRtl ? 'true' : 'false'}
                 >
                     {type.toLowerCase() === 'service' &&
                         blogs.map((blog: any, i: number) => {

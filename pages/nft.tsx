@@ -1,17 +1,18 @@
+/* eslint-disable max-len */
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import { Autoplay, Navigation, Thumbs } from 'swiper';
+import { Autoplay, Navigation, Thumbs } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Nft = () => {
-    const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
     const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
     const [activeTab, setActiveTab] = useState<string>('all');
 
@@ -23,14 +24,14 @@ const Nft = () => {
             <div className="relative bg-black bg-[url(/assets/images/nft/nft-banner.png)] bg-cover bg-center bg-no-repeat pt-28 pb-80 md:pb-[400px] xl:pt-48">
                 <div className="container relative">
                     <div className="text-center text-4xl font-black text-white sm:text-6xl lg:text-[100px]">
-                        <img
+                        <Image
                             src="/assets/images/nft/ethereum-logo.svg"
                             alt=""
                             className="absolute -bottom-28 -left-6 hidden md:bottom-0 md:block"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         />
-                        <img
+                        <Image
                             src="/assets/images/nft/nft-conversion.svg"
                             alt=""
                             className="absolute -bottom-20 -right-5 hidden md:bottom-10 md:block"
@@ -44,7 +45,7 @@ const Nft = () => {
                                     change your
                                 </h2>
                             </div>
-                            <img src="/assets/images/nft/ethereum-icon.svg" alt="" className="h-9 sm:h-12 lg:h-auto" />
+                            <Image src="/assets/images/nft/ethereum-icon.svg" alt="" className="h-9 sm:h-12 lg:h-auto" />
                         </div>
                         <div className="relative mt-5 inline-block leading-normal">
                             <h2 className="relative z-[1] bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">digital experience</h2>
@@ -83,42 +84,40 @@ const Nft = () => {
                                 slidesPerView: 6,
                             },
                         }}
-                        dir={isRtl ? 'rtl' : 'ltr'}
-                        key={isRtl ? 'true' : 'false'}
                     >
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-1.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-1.svg" alt="" />
                             </Link>
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-2.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-2.svg" alt="" />
                             </Link>
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-3.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-3.svg" alt="" />
                             </Link>
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-4.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-4.svg" alt="" />
                             </Link>
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-5.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-5.svg" alt="" />
                             </Link>
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <Link href="#" className="flex h-16 w-64 items-center justify-center p-2 transition hover:scale-110">
-                                <img src="/assets/images/nft/logo-6.svg" alt="" />
+                                <Image src="/assets/images/nft/logo-6.svg" alt="" />
                             </Link>
                         </SwiperSlide>
                     </Swiper>
@@ -131,12 +130,12 @@ const Nft = () => {
                         <h4>
                             Featured <span>Drops</span>
                         </h4>
-                        <p>The World's Largest Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens</p>
+                        <p>The Worlds Largest Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens</p>
                     </div>
                     <div className="grid gap-5 font-bold text-white sm:grid-cols-2 md:gap-[30px] lg:grid-cols-3">
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#653887]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature1.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -167,12 +166,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -189,7 +188,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#aa782d]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature2.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -220,12 +219,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -242,7 +241,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#43832f]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature3.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -273,12 +272,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -295,7 +294,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#9a3458]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature4.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -339,12 +338,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -361,7 +360,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#3b488c]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature5.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -405,12 +404,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -427,7 +426,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#3a6872]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature6.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -471,12 +470,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -493,7 +492,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#aaa39e]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature7.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -537,12 +536,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -559,7 +558,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#331e3d]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature8.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -603,12 +602,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -625,7 +624,7 @@ const Nft = () => {
                         </div>
                         <div className="relative h-[400px] overflow-hidden rounded-[10px] bg-[#758a8f]">
                             <Link href="#" className="group">
-                                <img
+                                <Image
                                     src="/assets/images/nft/feature9.jpg"
                                     alt=""
                                     className="h-full w-full object-cover transition duration-500 group-hover:scale-125"
@@ -669,12 +668,12 @@ const Nft = () => {
                                 <div className="bg-white/20 p-4 backdrop-blur-3xl">
                                     <div className="mb-4 flex items-center justify-between gap-4">
                                         <h5>Army WW1945</h5>
-                                        <img src="/assets/images/nft/eth-icon.png" alt="" />
+                                        <Image src="/assets/images/nft/eth-icon.png" alt="" />
                                     </div>
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-2.5">
                                             <div className="h-8 w-8 overflow-hidden rounded-full">
-                                                <img src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/creator.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <span className="text-xs opacity-60">Creator</span>
@@ -792,8 +791,8 @@ const Nft = () => {
                             <div className="rounded-[10px] bg-white p-4 dark:bg-gray-dark">
                                 <div className="mb-5 flex items-center gap-3">
                                     <div className="relative h-11 w-11">
-                                        <img src="/assets/images/nft/nft-1.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
+                                        <Image src="/assets/images/nft/nft-1.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
                                     </div>
                                     <div>
                                         <h4>NextFuture Abstract</h4>
@@ -802,17 +801,17 @@ const Nft = () => {
                                 </div>
                                 <div className="flex gap-2 lg:h-60">
                                     <div className="w-7/12 overflow-hidden rounded-[10px]">
-                                        <img src="/assets/images/nft/nft-1-one.png" alt="" className="h-full w-full object-cover" />
+                                        <Image src="/assets/images/nft/nft-1-one.png" alt="" className="h-full w-full object-cover" />
                                     </div>
                                     <div className="flex w-5/12 flex-col gap-2">
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-1-two.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-1-two.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-1-three.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-1-three.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-1-four.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-1-four.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -822,8 +821,8 @@ const Nft = () => {
                             <div className="rounded-[10px] bg-white p-4 dark:bg-gray-dark">
                                 <div className="mb-5 flex items-center gap-3">
                                     <div className="relative h-11 w-11">
-                                        <img src="/assets/images/nft/nft-2.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
+                                        <Image src="/assets/images/nft/nft-2.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
                                     </div>
                                     <div>
                                         <h4>NextFuture Abstract</h4>
@@ -832,17 +831,17 @@ const Nft = () => {
                                 </div>
                                 <div className="flex gap-2 lg:h-60">
                                     <div className="w-7/12 overflow-hidden rounded-[10px]">
-                                        <img src="/assets/images/nft/nft-2-one.png" alt="" className="h-full w-full object-cover" />
+                                        <Image src="/assets/images/nft/nft-2-one.png" alt="" className="h-full w-full object-cover" />
                                     </div>
                                     <div className="flex w-5/12 flex-col gap-2">
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-2-two.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-2-two.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-2-three.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-2-three.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-2-four.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-2-four.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -852,8 +851,8 @@ const Nft = () => {
                             <div className="rounded-[10px] bg-white p-4 dark:bg-gray-dark">
                                 <div className="mb-5 flex items-center gap-3">
                                     <div className="relative h-11 w-11">
-                                        <img src="/assets/images/nft/nft-3.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
+                                        <Image src="/assets/images/nft/nft-3.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
                                     </div>
                                     <div>
                                         <h4>NextFuture Abstract</h4>
@@ -862,17 +861,17 @@ const Nft = () => {
                                 </div>
                                 <div className="flex gap-2 lg:h-60">
                                     <div className="w-7/12 overflow-hidden rounded-[10px]">
-                                        <img src="/assets/images/nft/nft-3-one.png" alt="" className="h-full w-full object-cover" />
+                                        <Image src="/assets/images/nft/nft-3-one.png" alt="" className="h-full w-full object-cover" />
                                     </div>
                                     <div className="flex w-5/12 flex-col gap-2">
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-3-two.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-3-two.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-3-three.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-3-three.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-3-four.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-3-four.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -882,8 +881,8 @@ const Nft = () => {
                             <div className="rounded-[10px] bg-white p-4 dark:bg-gray-dark">
                                 <div className="mb-5 flex items-center gap-3">
                                     <div className="relative h-11 w-11">
-                                        <img src="/assets/images/nft/nft-4.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
+                                        <Image src="/assets/images/nft/nft-4.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 -bottom-0 h-5 w-5" />
                                     </div>
                                     <div>
                                         <h4>NextFuture Abstract</h4>
@@ -892,17 +891,17 @@ const Nft = () => {
                                 </div>
                                 <div className="flex gap-2 lg:h-60">
                                     <div className="w-7/12 overflow-hidden rounded-[10px]">
-                                        <img src="/assets/images/nft/nft-4-one.png" alt="" className="h-full w-full object-cover" />
+                                        <Image src="/assets/images/nft/nft-4-one.png" alt="" className="h-full w-full object-cover" />
                                     </div>
                                     <div className="flex w-5/12 flex-col gap-2">
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-4-two.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-4-two.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-4-three.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-4-three.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                         <div className="h-1/3 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/nft/nft-4-four.png" alt="" className="h-full w-full object-cover" />
+                                            <Image src="/assets/images/nft/nft-4-four.png" alt="" className="h-full w-full object-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -947,7 +946,7 @@ const Nft = () => {
                             <div className="cursor-pointer rounded-[10px] bg-white p-5 transition duration-500 hover:shadow-[0_0_40px_rgba(0,0,0,0.1)] dark:bg-gray-dark dark:hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]">
                                 <h5 className="font-bold uppercase">STEP-3</h5>
                                 <div className="mt-7">
-                                    <h4 className="font-extrabold text-black dark:text-white">Add your NFT's</h4>
+                                    <h4 className="font-extrabold text-black dark:text-white">Add your NFTs</h4>
                                     <p className="mt-2 text-sm font-semibold leading-7">
                                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                                     </p>
@@ -958,7 +957,7 @@ const Nft = () => {
                             <div className="cursor-pointer rounded-[10px] bg-white p-5 transition duration-500 hover:shadow-[0_0_40px_rgba(0,0,0,0.1)] dark:bg-gray-dark dark:hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]">
                                 <h5 className="font-bold uppercase">STEP-4</h5>
                                 <div className="mt-7">
-                                    <h4 className="font-extrabold text-black dark:text-white">Sell your NFT's</h4>
+                                    <h4 className="font-extrabold text-black dark:text-white">Sell your NFTs</h4>
                                     <p className="mt-2 text-sm font-semibold leading-7">
                                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                                     </p>
@@ -978,7 +977,7 @@ const Nft = () => {
                                 <h4 className="!text-white">
                                     Start your own collection <span>today</span>
                                 </h4>
-                                <p className="xl:w-2/3">The World's Largest Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens</p>
+                                <p className="xl:w-2/3">The worlds Largest Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens</p>
                             </div>
                             <div className="mb-12 grid grid-cols-2 gap-2 text-sm font-bold sm:grid-cols-3 xl:w-3/4">
                                 <div data-aos="fade-up" data-aos-duration="1000">
@@ -1007,7 +1006,7 @@ const Nft = () => {
                             </div>
                         </div>
                         <div className="max-w-[370px] flex-none" data-aos="fade-up" data-aos-duration="1000">
-                            <img src="/assets/images/nft/nft-img.png" alt="" className="h-full w-full object-cover" />
+                            <Image src="/assets/images/nft/nft-img.png" alt="" className="h-full w-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -1049,13 +1048,11 @@ const Nft = () => {
                             slidesPerView: 7,
                         },
                     }}
-                    dir={isRtl ? 'rtl' : 'ltr'}
-                    key={isRtl ? 'true' : 'false'}
                 >
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists1.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists1.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@makinzi_jamy</div>
@@ -1067,7 +1064,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists2.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists2.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@mazanov_sky</div>
@@ -1078,7 +1075,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists3.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists3.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@jimmy_dom</div>
@@ -1089,7 +1086,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists4.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists4.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@stivan_rominok</div>
@@ -1100,7 +1097,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists5.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists5.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@mazanov_sky</div>
@@ -1111,7 +1108,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists6.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists6.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@danil_pan</div>
@@ -1122,7 +1119,7 @@ const Nft = () => {
                     <SwiperSlide className="text-center">
                         <div className="inline-flex w-auto items-center gap-2.5 rounded-full bg-white p-3 pr-8 dark:bg-gray-dark">
                             <div className="h-[60px] w-[60px] overflow-hidden rounded-full bg-[#7780a126]">
-                                <img src="/assets/images/nft/artists7.png" alt="" className="h-full w-full object-cover" />
+                                <Image src="/assets/images/nft/artists7.png" alt="" className="h-full w-full object-cover" />
                             </div>
                             <div className="ltr:text-left rtl:text-right">
                                 <div className="font-extrabold text-black dark:text-white">@kristian_fel</div>
@@ -1158,8 +1155,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">1</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client1.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client1.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Trippin’ Ape Tribe</h4>
@@ -1185,8 +1182,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">2</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client2.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client2.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">The Nice Guy</h4>
@@ -1212,8 +1209,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">3</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client3.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client3.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Banana’s Peel</h4>
@@ -1239,8 +1236,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">4</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client4.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client4.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Idoitz Fantasy</h4>
@@ -1268,8 +1265,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">5</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client5.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client5.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Cool Cats</h4>
@@ -1295,8 +1292,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">6</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client6.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client6.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">The Glitch Mon..</h4>
@@ -1322,8 +1319,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">7</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client7.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client7.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Bored Ape Yatc..</h4>
@@ -1349,8 +1346,8 @@ const Nft = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="sm:text-lg">8</span>
                                     <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-                                        <img src="/assets/images/nft/client8.png" alt="" className="h-full w-full rounded-full object-cover" />
-                                        <img src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
+                                        <Image src="/assets/images/nft/client8.png" alt="" className="h-full w-full rounded-full object-cover" />
+                                        <Image src="/assets/images/nft/verify.svg" alt="" className="absolute -right-1 bottom-0" />
                                     </div>
                                     <div>
                                         <h4 className="sm:text-lg">Make A Witch</h4>
@@ -1452,21 +1449,19 @@ const Nft = () => {
                         <div className="hidden w-2/5 space-y-7 text-sm font-bold md:block">
                             <Swiper
                                 className="client-slider-slides max-h-[500px]"
-                                onSwiper={(e) => setThumbsSwiper(e)}
+                                onSwiper={(e: any) => setThumbsSwiper(e)}
                                 direction="vertical"
                                 mousewheel={true}
                                 slidesPerView={4}
                                 loop={true}
                                 freeMode={true}
                                 watchSlidesProgress={true}
-                                dir={isRtl ? 'rtl' : 'ltr'}
-                                key={isRtl ? 'true' : 'false'}
                             >
                                 <SwiperSlide>
                                     <div className="cursor-pointer rounded-[10px] bg-gradient-to-t from-gray/[0.08] to-transparent p-4">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-1.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-1.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Allan Branch</h4>
@@ -1479,7 +1474,7 @@ const Nft = () => {
                                     <div className="cursor-pointer rounded-[10px] bg-gradient-to-t from-gray/[0.08] to-transparent p-4">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-2.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-2.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Alistair Clay</h4>
@@ -1492,7 +1487,7 @@ const Nft = () => {
                                     <div className="cursor-pointer rounded-[10px] bg-gradient-to-t from-gray/[0.08] to-transparent p-4">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-3.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-3.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Tim Nichols</h4>
@@ -1505,7 +1500,7 @@ const Nft = () => {
                                     <div className="cursor-pointer rounded-[10px] bg-gradient-to-t from-gray/[0.08] to-transparent p-4">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-4.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-4.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Mark Colgan</h4>
@@ -1526,14 +1521,12 @@ const Nft = () => {
                                 }}
                                 thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
                                 modules={[Navigation, Thumbs]}
-                                dir={isRtl ? 'rtl' : 'ltr'}
-                                key={isRtl ? 'true' : 'false'}
                             >
                                 <SwiperSlide>
                                     <div className="rounded-[32px] bg-white px-4 py-8 dark:bg-gray-dark lg:p-8">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-1.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-1.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Allan Branch</h4>
@@ -1558,8 +1551,8 @@ const Nft = () => {
                                             <h6 className="pb-7 font-extrabold">“Best Design Company”</h6>
                                             <p className="text-sm font-semibold italic">
                                                 We partnered with Fluid Studios to design our website. We found them incredibly helpful and patient as we really
-                                                didn't know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
-                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you won't be
+                                                didnt know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
+                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you wont be
                                                 disappointed.
                                             </p>
                                             <ul className="mt-7 list-inside list-disc text-sm font-bold text-gray ltr:text-right rtl:text-left">
@@ -1572,7 +1565,7 @@ const Nft = () => {
                                     <div className="rounded-[32px] bg-white px-4 py-8 dark:bg-gray-dark lg:p-8">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-2.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-2.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Alistair Clay</h4>
@@ -1597,8 +1590,8 @@ const Nft = () => {
                                             <h6 className="pb-7 font-extrabold">“Best Design Company”</h6>
                                             <p className="text-sm font-semibold italic">
                                                 We partnered with Fluid Studios to design our website. We found them incredibly helpful and patient as we really
-                                                didn't know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
-                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you won't be
+                                                didnt know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
+                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you wont be
                                                 disappointed.
                                             </p>
                                             <ul className="mt-7 list-inside list-disc text-sm font-bold text-gray ltr:text-right rtl:text-left">
@@ -1611,7 +1604,7 @@ const Nft = () => {
                                     <div className="rounded-[32px] bg-white px-4 py-8 dark:bg-gray-dark lg:p-8">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-3.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-3.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Tim Nichols</h4>
@@ -1636,8 +1629,8 @@ const Nft = () => {
                                             <h6 className="pb-7 font-extrabold">“Best Design Company”</h6>
                                             <p className="text-sm font-semibold italic">
                                                 We partnered with Fluid Studios to design our website. We found them incredibly helpful and patient as we really
-                                                didn't know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
-                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you won't be
+                                                didnt know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
+                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you wont be
                                                 disappointed.
                                             </p>
                                             <ul className="mt-7 list-inside list-disc text-sm font-bold text-gray ltr:text-right rtl:text-left">
@@ -1650,7 +1643,7 @@ const Nft = () => {
                                     <div className="rounded-[32px] bg-white px-4 py-8 dark:bg-gray-dark lg:p-8">
                                         <div className="flex items-center gap-4">
                                             <div className="h-16 w-16 flex-none rounded-full">
-                                                <img src="/assets/images/nft/testimonial-client-4.png" alt="" className="h-full w-full object-cover" />
+                                                <Image src="/assets/images/nft/testimonial-client-4.png" alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="text-xl font-extrabold text-black dark:text-white">Mark Colgan</h4>
@@ -1675,8 +1668,8 @@ const Nft = () => {
                                             <h6 className="pb-7 font-extrabold">“Best Design Company”</h6>
                                             <p className="text-sm font-semibold italic">
                                                 We partnered with Fluid Studios to design our website. We found them incredibly helpful and patient as we really
-                                                didn't know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
-                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you won't be
+                                                didnt know what we wanted. Greg met with us on numerous occasions and we found the whole process a great
+                                                experience. We ended up with a website we loved. I would definitely recommend Fluid Studios - you wont be
                                                 disappointed.
                                             </p>
                                             <ul className="mt-7 list-inside list-disc text-sm font-bold text-gray ltr:text-right rtl:text-left">

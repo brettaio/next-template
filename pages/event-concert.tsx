@@ -2,7 +2,7 @@ import Link from 'next/link';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import { useEffect, useState, useRef } from 'react';
