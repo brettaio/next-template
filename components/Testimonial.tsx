@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,6 +10,14 @@ const Testimonial = ({
     showTitle = true,
     type = 'common',
     feedbacks = [
+        {
+            id: 1,
+            name: 'Allan Branch',
+            role: 'CEO of Lifted',
+            thumbnail: '/assets/images/testimonial.png',
+            message:
+                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        },
         {
             id: 1,
             name: 'Allan Branch',

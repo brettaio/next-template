@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import ClientSlider from '../components/ClientSlider';
@@ -204,13 +204,7 @@ const Application = () => {
                                             strokeLinejoin="round"
                                         />
                                         <path d="M30.5432 36.4171L37.1433 43" stroke="#66DA78" strokeWidth="3" />
-                                        <path
-                                            d="M30.5432 36.4171L37.1433 43"
-                                            stroke="#66DA78"
-                                            strokeWidth="3"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
+                                        <path d="M30.5432 36.4171L37.1433 43" stroke="#66DA78" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                                 <h3 className="mt-7 text-[22px] font-extrabold text-black dark:text-white">SEO</h3>

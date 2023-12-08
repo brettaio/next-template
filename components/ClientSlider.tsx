@@ -1,8 +1,10 @@
+/* eslint-disable max-len */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 
@@ -56,7 +58,7 @@ const ClientSlider = ({
                                         <p className="font-semibold leading-7">{feedback.message}</p>
                                         <div className="mt-12 flex items-center gap-2.5">
                                             <div>
-                                                <img src="/assets/images/creative/client-img1.png" alt="" />
+                                                <Image src="/assets/images/creative/client-img1.png" alt="" />
                                             </div>
                                             <div>
                                                 <h5 className="text-lg font-bold text-black dark:text-white">{feedback.name}</h5>
@@ -114,7 +116,7 @@ const ClientSlider = ({
                                     <div className="flex justify-between gap-7 p-7">
                                         <div className="flex items-center gap-2.5">
                                             <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
-                                                <img src={feedback.thumbnail} alt="" className="h-full w-full object-cover" />
+                                                <Image src={feedback.thumbnail} alt="" className="h-full w-full object-cover" />
                                             </div>
                                             <div>
                                                 <h5 className="text-lg font-bold text-black dark:text-white">{feedback.name}</h5>

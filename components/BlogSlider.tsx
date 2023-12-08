@@ -1,8 +1,10 @@
+/* eslint-disable max-len */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 
@@ -32,7 +34,7 @@ const BlogSlider = ({
             title: 'Long Term Game Means Long Term Gains',
             excerpt: "So You've Got A Mate That Said SEO",
             description:
-                'Search Engine Optimisation is the most smoke and mirror concept in digital advertising, there is no secret sauce, well there is... Kind of, let me explain... If you have the time (pun intended)',
+                'SEO is the most smoke and mirror concept in digital advertising, there is no secret sauce, well there is... Kind of, let me explain... If you have the time (pun intended)',
         },
     ],
     type = 'service',
@@ -124,7 +126,7 @@ const BlogSlider = ({
                                 <SwiperSlide key={blog.id}>
                                     <div className="relative rounded-3xl border border-transparent bg-white transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:bg-gray-dark">
                                         <Link href="/blog-details" className="absolute top-0 h-full w-full ltr:left-0 rtl:right-0"></Link>
-                                        <img src={blog.thumbnail} alt="blog1" className="h-52 w-full rounded-t-3xl object-cover" />
+                                        <Image src={blog.thumbnail} alt="blog1" className="h-52 w-full rounded-t-3xl object-cover" />
                                         <div className="p-5 text-sm font-bold">
                                             <h6 className="font-extrabold text-secondary dark:text-secondary">{blog.title}</h6>
                                             <h5 className="my-[10px] block text-lg font-extrabold leading-[23px] text-black line-clamp-2 dark:text-white">
@@ -142,12 +144,12 @@ const BlogSlider = ({
                             return (
                                 <SwiperSlide key={blog.id}>
                                     <div className="rounded-3xl bg-white dark:bg-gray-dark">
-                                        <img src={blog.thumbnail} alt="blog-3" className="h-52 w-full rounded-t-3xl object-cover" />
+                                        <Image src={blog.thumbnail} alt="blog-3" className="h-52 w-full rounded-t-3xl object-cover" />
                                         <div className="p-5 text-sm font-bold">
                                             <span className="rounded bg-primary/10 py-1 px-2 text-sm font-extrabold text-primary">{blog.tag}</span>
                                             <Link
                                                 href="/blog-details"
-                                                className="my-[10px] block text-lg font-extrabold leading-[23px] text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
+                                                className="my-[10px] block text-lg font-extrabold leading-[23px] text-black transition line-clamp-2 hover:text-secondary"
                                             >
                                                 {blog.title}
                                             </Link>

@@ -3,7 +3,7 @@ import { IRootState } from '../store';
 import Testimonial from '../components/Testimonial';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Faq from '../components/Faq';
 import Head from 'next/head';
@@ -339,7 +339,7 @@ const Restaurent = () => {
                         alt=""
                         className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
                     />
-                    <Faq type="restaurent"/>
+                    <Faq type="restaurent" />
                 </section>
 
                 <section className="py-20 md:py-28">

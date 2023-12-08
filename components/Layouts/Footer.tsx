@@ -3,6 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import mugShot from '../../public/assets/images/mugshot.svg';
 
+const alwaysWas = `Always Was`;
+const alwaysWill = `Always Will Be`;
+const aboriginalLand = `Aboriginal Land`;
+const aboriginalFlag = `[-o-]`;
+
 const Footer = () => {
     return (
         <footer className="mt-auto bg-white">
@@ -166,20 +171,26 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] py-5 dark:border-t-2 dark:border-white/5 dark:bg-none">
+            <div className="bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] py-5 dark:border-t-2">
                 <div className="container">
                     <div className="items-center justify-between text-center font-bold dark:text-white md:flex">
                         <div>Copyright © {new Date().getFullYear() + ' '}</div>
                         <div>
-                            Hands Together for{' '}
+                            {' '}
+                            {alwaysWas + ' '}
+                            {alwaysWill + ' '}
+                            {aboriginalLand + ' '}
+                            {aboriginalFlag + ' '}
+                        </div>
+                        <div>
+                            Putya Hands Together 4{' '}
                             <Link href="https://bretta.io" className="text-primary transition hover:text-secondary">
                                 Bretta
                             </Link>
                         </div>
                         <div>
-                            Need help? Give Us A Call{' '}
                             <Link href="tel:+15195214260" className="text-secondary transition hover:text-primary">
-                                Always Was. Always Will Be.
+                                Need help? Call us!
                             </Link>
                         </div>
                     </div>

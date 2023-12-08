@@ -1,12 +1,14 @@
+/* eslint-disable max-len */
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { IRootState } from '../store';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Blog2 = () => {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
@@ -20,7 +22,7 @@ const Blog2 = () => {
                     <div className="relative">
                         <div className="text-center lg:max-w-[754px] ltr:lg:text-left rtl:lg:text-right">
                             <h2 className="text-3xl font-black sm:text-5xl md:text-6xl">
-                                We'll help <span className="text-primary">digitally</span> transform <span className="text-secondary">your business.</span>
+                                We help <span className="text-primary">digitally</span> transform <span className="text-secondary">your business.</span>
                             </h2>
                             <p className="mt-7 text-base font-semibold xl:text-lg">
                                 lorem ipsum is a placeholder text to demonstrate the visual form of a typeface without relying on very meaningful content like
@@ -36,7 +38,7 @@ const Blog2 = () => {
                             </div>
                         </div>
                         <div className="top-0 mt-10 w-full max-w-[686px] ltr:right-0 rtl:left-0 lg:absolute" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="/assets/images/blog/blog_banner.png" className="rtl:rotate-y-180" alt="" />
+                            <Image src="/assets/images/blog/blog_banner.png" className="rtl:rotate-y-180" alt="" />
                         </div>
                     </div>
                 </div>
@@ -54,14 +56,14 @@ const Blog2 = () => {
                                 <div className="flex rounded-[10px]">
                                     <div>
                                         <div className="relative overflow-hidden rounded-[10px] md:max-w-[360px]">
-                                            <img src="/assets/images/blog/blogs1.jpg" alt="" />
+                                            <Image src="/assets/images/blog/blogs1.jpg" alt="" />
                                             <p className="absolute top-5 left-5 rounded bg-primary py-1 px-2.5 text-[12px] font-extrabold leading-4 text-white">
                                                 LIFESTYLE
                                             </p>
                                         </div>
                                         <div className="mt-3 mb-4 flex gap-4">
                                             <div className="flex items-center gap-3">
-                                                <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                                <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                                 <p className="text-[13px] font-semibold">Shaun Park</p>
                                             </div>
                                             <div className="flex items-center gap-2">
@@ -145,7 +147,7 @@ const Blog2 = () => {
                                     <div className="group flex gap-[14px]">
                                         <div className="flex-none">
                                             <div className="relative h-[120px] w-[120px] overflow-hidden rounded-[10px]">
-                                                <img src="/assets/images/blog/blogs2.jpg" className="h-full w-full object-cover" alt="" />
+                                                <Image src="/assets/images/blog/blogs2.jpg" className="h-full w-full object-cover" alt="" />
                                             </div>
                                         </div>
                                         <div className="flex-1">
@@ -182,7 +184,7 @@ const Blog2 = () => {
                                     <div className="flex gap-[14px]">
                                         <div className="flex-none">
                                             <div className="relative h-[120px] w-[120px] overflow-hidden rounded-[10px]">
-                                                <img src="/assets/images/blog/blogs3.jpg" className="h-full w-full object-cover" alt="" />
+                                                <Image src="/assets/images/blog/blogs3.jpg" className="h-full w-full object-cover" alt="" />
                                             </div>
                                         </div>
                                         <div className="flex-1">
@@ -219,7 +221,7 @@ const Blog2 = () => {
                                     <div className="flex gap-[14px]">
                                         <div className="flex-none">
                                             <div className="relative h-[120px] w-[120px] overflow-hidden rounded-[10px]">
-                                                <img src="/assets/images/blog/blogs4.jpg" className="h-full w-full object-cover" alt="" />
+                                                <Image src="/assets/images/blog/blogs4.jpg" className="h-full w-full object-cover" alt="" />
                                             </div>
                                         </div>
                                         <div className="flex-1">
@@ -264,7 +266,7 @@ const Blog2 = () => {
                                 <div className="flex gap-3">
                                     <div className="flex-none">
                                         <div className="relative h-20 w-20 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/blog/popular1.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/popular1.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                     </div>
                                     <div>
@@ -300,7 +302,7 @@ const Blog2 = () => {
                                 <div className="flex gap-3">
                                     <div className="flex-none">
                                         <div className="relative h-20 w-20 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/blog/popular2.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/popular2.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                     </div>
                                     <div>
@@ -336,7 +338,7 @@ const Blog2 = () => {
                                 <div className="flex gap-3">
                                     <div className="flex-none">
                                         <div className="relative h-20 w-20 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/blog/popular3.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/popular3.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                     </div>
                                     <div>
@@ -372,7 +374,7 @@ const Blog2 = () => {
                                 <div className="flex gap-3">
                                     <div className="flex-none">
                                         <div className="relative h-20 w-20 overflow-hidden rounded-[10px]">
-                                            <img src="/assets/images/blog/popular4.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/popular4.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                     </div>
                                     <div>
@@ -419,7 +421,7 @@ const Blog2 = () => {
                     <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-2" data-aos="flip-left" data-aos-duration="1000">
                         <div className="group relative h-[300px] flex-1 overflow-hidden rounded-[10px] sm:h-auto">
                             <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black"></div>
-                            <img
+                            <Image
                                 src="/assets/images/blog/trending1.jpg"
                                 className="h-full w-full rotate-0 object-cover duration-200 group-hover:rotate-2 group-hover:scale-110"
                                 alt=""
@@ -438,7 +440,7 @@ const Blog2 = () => {
                                 <div className="border-b border-white/40"></div>
                                 <div className="mt-[14px] flex gap-4">
                                     <div className="flex items-center gap-3">
-                                        <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                        <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                         <p className="text-[13px] font-semibold">Shaun Park</p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -467,7 +469,7 @@ const Blog2 = () => {
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                             <div className="group relative h-[263px] w-full overflow-hidden rounded-[10px] lg:max-w-[263px]">
                                 <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black"></div>
-                                <img
+                                <Image
                                     src="/assets/images/blog/trending2.jpg"
                                     className="h-full w-full rotate-0 object-cover duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -503,7 +505,7 @@ const Blog2 = () => {
                             </div>
                             <div className="group relative h-[263px] w-full overflow-hidden rounded-[10px] lg:max-w-[263px]">
                                 <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black"></div>
-                                <img
+                                <Image
                                     src="/assets/images/blog/trending4.jpg"
                                     className="h-full w-full rotate-0 object-cover duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -539,7 +541,7 @@ const Blog2 = () => {
                             </div>
                             <div className="group relative h-[263px] w-full overflow-hidden rounded-[10px] lg:max-w-[263px]">
                                 <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black"></div>
-                                <img
+                                <Image
                                     src="/assets/images/blog/trending3.jpg"
                                     className="h-full w-full rotate-0 object-cover duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -575,7 +577,7 @@ const Blog2 = () => {
                             </div>
                             <div className="group relative h-[263px] w-full overflow-hidden rounded-[10px] lg:max-w-[263px]">
                                 <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black"></div>
-                                <img
+                                <Image
                                     src="/assets/images/blog/trending5.jpg"
                                     className="h-full w-full rotate-0 object-cover duration-200 group-hover:rotate-2 group-hover:scale-110"
                                     alt=""
@@ -683,13 +685,13 @@ const Blog2 = () => {
                             <SwiperSlide>
                                 <div className="relative h-[346px] overflow-hidden rounded-[10px]">
                                     <div className="absolute inset-0 bg-black/30"></div>
-                                    <img src="/assets/images/blog/stories1.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/stories1.jpg" className="h-full w-full object-cover" alt="" />
                                     <div className="absolute bottom-5 ltr:left-5 rtl:right-5">
                                         <p className="inline-block rounded bg-primary py-1 px-2.5 text-[12px] font-extrabold text-white">FASHION</p>
                                         <h5 className="mt-3 text-xl font-extrabold text-white">16 Unheard Ways To Achieve Greater Walker</h5>
                                         <div className="mt-[14px] flex gap-4">
                                             <div className="flex items-center gap-3">
-                                                <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                                <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                                 <p className="text-[13px] font-semibold text-white">Shaun Park</p>
                                             </div>
                                             <div className="flex items-center gap-2">
@@ -720,13 +722,13 @@ const Blog2 = () => {
                             <SwiperSlide>
                                 <div className="relative h-[346px] overflow-hidden rounded-[10px]">
                                     <div className="absolute inset-0 bg-black/30"></div>
-                                    <img src="/assets/images/blog/stories2.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/stories2.jpg" className="h-full w-full object-cover" alt="" />
                                     <div className="absolute bottom-5 ltr:left-5 rtl:right-5">
                                         <p className="inline-block rounded bg-secondary py-1 px-2.5 text-[12px] font-extrabold text-white">TIPS</p>
                                         <h5 className="mt-3 text-xl font-extrabold text-white">Ten top tips to improve your financial management</h5>
                                         <div className="mt-[14px] flex gap-4">
                                             <div className="flex items-center gap-3">
-                                                <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                                <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                                 <p className="text-[13px] font-semibold text-white">Shaun Park</p>
                                             </div>
                                             <div className="flex items-center gap-2">
@@ -757,13 +759,13 @@ const Blog2 = () => {
                             <SwiperSlide>
                                 <div className="relative h-[346px] overflow-hidden rounded-[10px]">
                                     <div className="absolute inset-0 bg-black/30"></div>
-                                    <img src="/assets/images/blog/stories3.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/stories3.jpg" className="h-full w-full object-cover" alt="" />
                                     <div className="absolute bottom-5 ltr:left-5 rtl:right-5">
                                         <p className="inline-block rounded bg-secondary py-1 px-2.5 text-[12px] font-extrabold text-white">TIPS</p>
                                         <h5 className="mt-3 text-xl font-extrabold text-white">Ten top tips to improve your financial management</h5>
                                         <div className="mt-[14px] flex gap-4">
                                             <div className="flex items-center gap-3">
-                                                <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                                <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                                 <p className="text-[13px] font-semibold text-white">Shaun Park</p>
                                             </div>
                                             <div className="flex items-center gap-2">
@@ -817,7 +819,7 @@ const Blog2 = () => {
                             </div>
                         </div>
                         <div className="max-w-[440px]" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="/assets/images/blog/newsletter.png" alt="" />
+                            <Image src="/assets/images/blog/newsletter.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -865,10 +867,10 @@ const Blog2 = () => {
                         slidesPerView="auto"
                         spaceBetween={30}
                         speed={1000}
-                            autoplay={{
-                                delay: 3000,
-                                disableOnInteraction: false,
-                            }}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
                         navigation={{
                             nextEl: '.feedback-slider-button-next',
                             prevEl: '.feedback-slider-button-prev',
@@ -890,13 +892,13 @@ const Blog2 = () => {
                     >
                         <SwiperSlide>
                             <div className="relative h-[346px] overflow-hidden rounded-[10px]">
-                                <img src="/assets/images/blog/celebration1.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/blog/celebration1.jpg" className="h-full w-full object-cover" alt="" />
                                 <p className="absolute top-5 rounded bg-secondary py-1 px-2.5 text-[12px] text-white ltr:left-5 rtl:right-5">LIFESTYLE</p>
                             </div>
                             <div>
                                 <div className="mt-[14px] mb-3 flex gap-4">
                                     <div className="flex items-center gap-3">
-                                        <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                        <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                         <p className="text-[13px] font-semibold">Shaun Park</p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -931,13 +933,13 @@ const Blog2 = () => {
 
                         <SwiperSlide>
                             <div className="relative h-[346px] overflow-hidden rounded-[10px]">
-                                <img src="/assets/images/blog/celebration2.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/blog/celebration2.jpg" className="h-full w-full object-cover" alt="" />
                                 <p className="absolute top-5 rounded bg-primary py-1 px-2.5 text-[12px] text-white ltr:left-5 rtl:right-5">TRAVEL</p>
                             </div>
                             <div>
                                 <div className="mb-3 mt-[14px] flex gap-4">
                                     <div className="flex items-center gap-3">
-                                        <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                        <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                         <p className="text-[13px] font-semibold">Shaun Park</p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -972,13 +974,13 @@ const Blog2 = () => {
 
                         <SwiperSlide>
                             <div className="relative h-[346px] overflow-hidden rounded-[10px]">
-                                <img src="/assets/images/blog/celebration3.jpg" className="h-full w-full object-cover" alt="" />
+                                <Image src="/assets/images/blog/celebration3.jpg" className="h-full w-full object-cover" alt="" />
                                 <p className="absolute top-5 rounded bg-primary py-1 px-2.5 text-[12px] text-white ltr:left-5 rtl:right-5">TRAVEL</p>
                             </div>
                             <div>
                                 <div className="mb-3 mt-[14px] flex gap-4">
                                     <div className="flex items-center gap-3">
-                                        <img src="/assets/images/blog/shaun.png" className="w-9" alt="" />
+                                        <Image src="/assets/images/blog/shaun.png" className="w-9" alt="" />
                                         <p className="text-[13px] font-semibold">Shaun Park</p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -1026,7 +1028,7 @@ const Blog2 = () => {
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                     <div className="relative overflow-hidden rounded-[10px]">
                                         <div className="h-[150px]">
-                                            <img src="/assets/images/blog/recent1.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/recent1.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                         <div className="bg-white p-3">
                                             <Link
@@ -1039,7 +1041,7 @@ const Blog2 = () => {
                                             <div className="border-b border-[#EFEFEF]"></div>
                                             <div className="mt-2 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william1.png" alt="" />
+                                                    <Image src="/assets/images/blog/william1.png" alt="" />
                                                     <p className="c">William Wong</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1070,7 +1072,7 @@ const Blog2 = () => {
                                     </div>
                                     <div className="relative overflow-hidden rounded-[10px]">
                                         <div className="h-[150px]">
-                                            <img src="/assets/images/blog/recent2.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/recent2.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                         <div className="bg-white p-3">
                                             <Link
@@ -1085,7 +1087,7 @@ const Blog2 = () => {
                                             <div className="border-b border-[#EFEFEF]"></div>
                                             <div className="mt-2 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william2.png" alt="" />
+                                                    <Image src="/assets/images/blog/william2.png" alt="" />
                                                     <p className="c">Mat Vogels</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1116,7 +1118,7 @@ const Blog2 = () => {
                                     </div>
                                     <div className="relative overflow-hidden rounded-[10px]">
                                         <div className="h-[150px]">
-                                            <img src="/assets/images/blog/recent3.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/recent3.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                         <div className="bg-white p-3">
                                             <Link
@@ -1131,7 +1133,7 @@ const Blog2 = () => {
                                             <div className="border-b border-[#EFEFEF]"></div>
                                             <div className="mt-2 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william1.png" alt="" />
+                                                    <Image src="/assets/images/blog/william1.png" alt="" />
                                                     <p className="c">William Wong</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1162,7 +1164,7 @@ const Blog2 = () => {
                                     </div>
                                     <div className="relative overflow-hidden rounded-[10px]">
                                         <div className="h-[150px]">
-                                            <img src="/assets/images/blog/recent4.jpg" className="h-full w-full object-cover" alt="" />
+                                            <Image src="/assets/images/blog/recent4.jpg" className="h-full w-full object-cover" alt="" />
                                         </div>
                                         <div className="bg-white p-3">
                                             <Link
@@ -1177,7 +1179,7 @@ const Blog2 = () => {
                                             <div className="border-b border-[#EFEFEF]"></div>
                                             <div className="mt-2 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william2.png" alt="" />
+                                                    <Image src="/assets/images/blog/william2.png" alt="" />
                                                     <p className="c">Mat Vogels</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1216,7 +1218,7 @@ const Blog2 = () => {
                                 <div className="space-y-6">
                                     <div className="relative h-[306px] w-full overflow-hidden rounded-[10px]">
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#000]/5 via-[#000]/60 to-[#000]/75"></div>
-                                        <img src="/assets/images/blog/featured1.jpg" className="h-full w-full object-cover" alt="" />
+                                        <Image src="/assets/images/blog/featured1.jpg" className="h-full w-full object-cover" alt="" />
                                         <div className="absolute bottom-5 left-5 right-5">
                                             <Link href="#" className="text-xl font-bold text-white hover:text-secondary dark:hover:text-secondary">
                                                 The Road Ahead
@@ -1225,7 +1227,7 @@ const Blog2 = () => {
                                             <div className="mt-3 border-b border-white/40"></div>
                                             <div className="mt-3 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william2.png" alt="" />
+                                                    <Image src="/assets/images/blog/william2.png" alt="" />
                                                     <p className="text-sm font-semibold text-white">Mat Vogels</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1256,7 +1258,7 @@ const Blog2 = () => {
                                     </div>
                                     <div className="relative h-[306px] overflow-hidden rounded-[10px]">
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#000]/5 via-[#000]/60 to-[#000]/75"></div>
-                                        <img src="/assets/images/blog/featured2.jpg" className="h-full w-full object-cover" alt="" />
+                                        <Image src="/assets/images/blog/featured2.jpg" className="h-full w-full object-cover" alt="" />
                                         <div className="absolute bottom-5 left-5 right-5">
                                             <Link href="#" className="text-xl font-bold text-white hover:text-secondary dark:hover:text-secondary">
                                                 From Top Down
@@ -1265,7 +1267,7 @@ const Blog2 = () => {
                                             <div className="mt-3 border-b border-white/40"></div>
                                             <div className="mt-3 flex justify-between">
                                                 <div className="flex items-center gap-2.5">
-                                                    <img src="/assets/images/blog/william1.png" alt="" />
+                                                    <Image src="/assets/images/blog/william1.png" alt="" />
                                                     <p className="text-sm font-semibold text-white">William Wong</p>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
@@ -1421,7 +1423,7 @@ const Blog2 = () => {
                             </div>
                             <div className="mt-5 flex flex-col gap-6 sm:flex-row">
                                 <div className="overflow-hidden rounded-[10px]">
-                                    <img src="/assets/images/blog/random1.jpg" alt="" />
+                                    <Image src="/assets/images/blog/random1.jpg" alt="" />
                                 </div>
                                 <div>
                                     <div className="mb-[14px]">
@@ -1463,7 +1465,7 @@ const Blog2 = () => {
                             </div>
                             <div className="flex flex-col gap-6 sm:flex-row">
                                 <div className="overflow-hidden rounded-[10px]">
-                                    <img src="/assets/images/blog/random2.jpg" alt="" />
+                                    <Image src="/assets/images/blog/random2.jpg" alt="" />
                                 </div>
                                 <div>
                                     <div className="mb-[14px]">
@@ -1511,7 +1513,7 @@ const Blog2 = () => {
                             </div>
                             <div className="mt-5 mb-5 flex gap-3">
                                 <div className="relative max-w-[165px] overflow-hidden rounded-[10px]">
-                                    <img src="/assets/images/blog/videos1.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/videos1.jpg" className="h-full w-full object-cover" alt="" />
                                     <Link
                                         href="#"
                                         className="absolute bottom-2.5 flex h-6 w-6 items-center justify-center bg-secondary text-white ltr:left-2.5 rtl:right-2.5"
@@ -1541,7 +1543,7 @@ const Blog2 = () => {
                             <div className="border-b border-dashed border-gray/50"></div>
                             <div className="mt-5 mb-5 flex gap-3">
                                 <div className="relative max-w-[165px] overflow-hidden rounded-[10px]">
-                                    <img src="/assets/images/blog/videos2.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/videos2.jpg" className="h-full w-full object-cover" alt="" />
                                     <Link
                                         href="#"
                                         className="absolute bottom-2.5 flex h-6 w-6 items-center justify-center bg-secondary text-white ltr:left-2.5 rtl:right-2.5"
@@ -1562,14 +1564,14 @@ const Blog2 = () => {
                                         href="#"
                                         className="mt-3 text-base font-bold text-black duration-200 hover:text-secondary dark:text-white dark:hover:text-secondary"
                                     >
-                                        An Exciting Car Representing Aston Martin's Future
+                                        An Exciting Car Representing Aston Martins Future
                                     </Link>
                                 </div>
                             </div>
                             <div className="border-b border-dashed border-gray/50"></div>
                             <div className="mt-5 flex gap-3">
                                 <div className="relative max-w-[165px] overflow-hidden rounded-[10px]">
-                                    <img src="/assets/images/blog/videos3.jpg" className="h-full w-full object-cover" alt="" />
+                                    <Image src="/assets/images/blog/videos3.jpg" className="h-full w-full object-cover" alt="" />
                                     <Link
                                         href="#"
                                         className="absolute bottom-2.5 flex h-6 w-6 items-center justify-center bg-secondary text-white ltr:left-2.5 rtl:right-2.5"

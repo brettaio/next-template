@@ -5,7 +5,7 @@ import Testimonial from '../components/Testimonial';
 import LogoSlider from '../components/LogoSlider';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Head from 'next/head';
 import Link from 'next/link';

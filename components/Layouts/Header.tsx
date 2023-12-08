@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'; // Update this line
 import Image from 'next/image';
 
 const Header = (props: any) => {
@@ -15,7 +15,6 @@ const Header = (props: any) => {
             setShowMenu(false);
         }
     };
-
     return (
         <header className={`sticky top-0 z-50 bg-black/10 duration-300 ${props.className}`}>
             <div className="container">

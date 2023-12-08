@@ -1,9 +1,11 @@
+/* eslint-disable max-len */
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const OfficeSwiper = () => {
     return (
@@ -74,7 +76,7 @@ const OfficeSwiper = () => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className="mt-10 rounded-[32px] bg-white dark:bg-gray-dark md:grid md:grid-cols-2 lg:mt-0">
+                                <div className="mt-10 rounded-[32px] bg-white md:grid md:grid-cols-2 lg:mt-0">
                                     <Image
                                         src="/assets/images/ofc.png"
                                         alt="ofc"
