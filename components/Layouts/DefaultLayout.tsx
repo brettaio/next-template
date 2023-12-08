@@ -107,7 +107,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                     </div>
                 )}
 
-                <div className="flex min-h-screen flex-col bg-white bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] font-mulish text-base font-normal text-gray antialiased dark:bg-[#101926] dark:from-transparent dark:to-transparent">
+                <div className="flex min-h-screen flex-col bg-white bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] font-mulish text-base font-normal text-gray antialiased">
                     <Header className={showTopButton ? 'sticky-header' : ''} />
 
                     <div className="-mt-[82px] flex-grow overflow-x-hidden lg:-mt-[106px]">{children}</div>
@@ -117,7 +117,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                 {/* Return to Top  */}
                 {showTopButton && (
                     <button type="button" className="fixed bottom-5 right-5 z-10 animate-bounce" onClick={goToTop}>
-                        <div className="group flex h-14 w-14 items-center justify-center rounded-full border border-black/20 bg-black text-white transition duration-500 hover:bg-secondary dark:bg-primary dark:hover:bg-secondary">
+                        <div className="group flex h-14 w-14 items-center justify-center rounded-full border border-black/20 bg-black text-white transition duration-500 hover:bg-secondary">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"

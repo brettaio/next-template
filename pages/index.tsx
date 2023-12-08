@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import Testimonial from '../components/Testimonial';
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 import CounterComponent from '../components/CounterComponent';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -51,7 +51,7 @@ const Index = () => {
                                 data-aos-delay="200"
                             >
                                 <div className="relative h-full">
-                                    <Link href="https://buy.stripe.com/00g9BDayA3XOfRKcMR">
+                                    <Link href="https://buy.stripe.com/fZe5ln224amc0WQ7sy">
                                         <Image src="/assets/images/mugshot.svg" alt="home-banner-icon" className="mx-auto" width={500} height={500} />
                                     </Link>
                                 </div>

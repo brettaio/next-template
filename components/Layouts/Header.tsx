@@ -19,9 +19,9 @@ const Header = (props: any) => {
     return (
         <header className={`sticky top-0 z-50 bg-black/10 duration-300 ${props.className}`}>
             <div className="container">
-                <div className="flex items-center justify-between py-5 lg:py-0">
+                <div className="flex items-center justify-between py-3 lg:py-0">
                     <Link href="/">
-                        <Image src="/assets/images/mugshot.svg" alt="bretta etc ltd logo" width={24} height={24} />
+                        <Image src="/assets/images/mugshot.svg" alt="bretta etc ltd logo" width={48} height={48} />
                     </Link>
                     <div className="flex items-center">
                         <div onClick={() => toggleMenu()} className={`overlay fixed inset-0 z-[51] bg-black/60 lg:hidden ${showMenu ? '' : 'hidden'}`}></div>
@@ -50,28 +50,28 @@ const Header = (props: any) => {
                                     <Link
                                         href="#"
                                         className={
-                                            router.pathname === '/crypto' ||
-                                            router.pathname === '/modern-saas' ||
-                                            router.pathname === '/real-estate' ||
-                                            router.pathname === '/healthcare' ||
-                                            router.pathname === '/marketing' ||
                                             router.pathname === '/application' ||
-                                            router.pathname === '/hotel-resort' ||
-                                            router.pathname === '/nft' ||
-                                            router.pathname === '/online-courses' ||
-                                            router.pathname === '/restaurant' ||
-                                            router.pathname === '/consulting' ||
-                                            router.pathname === '/creative-agency' ||
-                                            router.pathname === '/insurance' ||
-                                            router.pathname === '/photography' ||
-                                            router.pathname === '/construction' ||
                                             router.pathname === '/blog-landing' ||
+                                            router.pathname === '/consulting' ||
+                                            router.pathname === '/construction' ||
+                                            router.pathname === '/creative-agency' ||
+                                            router.pathname === '/crypto' ||
                                             router.pathname === '/event-concert' ||
                                             router.pathname === '/gym' ||
+                                            router.pathname === '/healthcare' ||
+                                            router.pathname === '/hotel-resort' ||
+                                            router.pathname === '/insurance' ||
                                             router.pathname === '/job-placement' ||
+                                            router.pathname === '/marketing' ||
+                                            router.pathname === '/modern-saas' ||
+                                            router.pathname === '/nft' ||
+                                            router.pathname === '/online-courses' ||
                                             router.pathname === '/online-payments' ||
                                             router.pathname === '/personal-portfolio' ||
-                                            router.pathname === '/portfolio-landing'
+                                            router.pathname === '/photography' ||
+                                            router.pathname === '/portfolio-landing' ||
+                                            router.pathname === '/real-estate' ||
+                                            router.pathname === '/restaurant'
                                                 ? 'active'
                                                 : ''
                                         }
@@ -90,56 +90,23 @@ const Header = (props: any) => {
                                         </div>
                                     </Link>
                                     <div className="submenu" onClick={() => toggleMenu()}>
-                                        <Link href="/crypto" className={router.pathname === '/crypto' ? 'active' : ''}>
-                                            Crypto Currency
-                                        </Link>
-                                        <Link href="/modern-saas" className={router.pathname === '/modern-saas' ? 'active' : ''}>
-                                            {' '}
-                                            Modern Saas{' '}
-                                        </Link>
-                                        <Link href="/real-estate" className={router.pathname === '/real-estate' ? 'active' : ''}>
-                                            {' '}
-                                            Real Estate{' '}
-                                        </Link>
-                                        <Link href="/healthcare" className={router.pathname === '/healthcare' ? 'active' : ''}>
-                                            {' '}
-                                            Health Care{' '}
-                                        </Link>
-                                        <Link href="/marketing" className={router.pathname === '/marketing' ? 'active' : ''}>
-                                            Sales Marketing
-                                        </Link>
                                         <Link href="/application" className={router.pathname === '/application' ? 'active' : ''}>
                                             Application
                                         </Link>
-                                        <Link href="/hotel-resort" className={router.pathname === '/hotel-resort' ? 'active' : ''}>
-                                            Hotel & Resort
-                                        </Link>
-                                        <Link href="/nft" className={router.pathname === '/nft' ? 'active' : ''}>
-                                            NFT Marketplace
-                                        </Link>
-                                        <Link href="/online-courses" className={router.pathname === '/online-courses' ? 'active' : ''}>
-                                            Online Courses
-                                        </Link>
-                                        <Link href="/restaurant" className={router.pathname === '/restaurant' ? 'active' : ''}>
-                                            Restaurant
+                                        <Link href="/blog-landing" className={router.pathname === '/blog-landing' ? 'active' : ''}>
+                                            Blog
                                         </Link>
                                         <Link href="/consulting" className={router.pathname === '/consulting' ? 'active' : ''}>
                                             Consulting
                                         </Link>
-                                        <Link href="/creative-agency" className={router.pathname === '/creative-agency' ? 'active' : ''}>
-                                            Creative Agency
-                                        </Link>
-                                        <Link href="/insurance" className={router.pathname === '/insurance' ? 'active' : ''}>
-                                            Insurance
-                                        </Link>
-                                        <Link href="/photography" className={router.pathname === '/photography' ? 'active' : ''}>
-                                            Photography
-                                        </Link>
                                         <Link href="/construction" className={router.pathname === '/construction' ? 'active' : ''}>
                                             Construction
                                         </Link>
-                                        <Link href="/blog-landing" className={router.pathname === '/blog-landing' ? 'active' : ''}>
-                                            Blog
+                                        <Link href="/creative-agency" className={router.pathname === '/creative-agency' ? 'active' : ''}>
+                                            Creative Agency
+                                        </Link>
+                                        <Link href="/crypto" className={router.pathname === '/crypto' ? 'active' : ''}>
+                                            Crypto Currency
                                         </Link>
                                         <Link href="/event-concert" className={router.pathname === '/event-concert' ? 'active' : ''}>
                                             Event Concert
@@ -153,11 +120,32 @@ const Header = (props: any) => {
                                                 New
                                             </span>
                                         </Link>
+                                        <Link href="/healthcare" className={router.pathname === '/healthcare' ? 'active' : ''}>
+                                            Health Care
+                                        </Link>
+                                        <Link href="/hotel-resort" className={router.pathname === '/hotel-resort' ? 'active' : ''}>
+                                            Hotel & Resort
+                                        </Link>
+                                        <Link href="/insurance" className={router.pathname === '/insurance' ? 'active' : ''}>
+                                            Insurance
+                                        </Link>
                                         <Link href="/job-placement" className={router.pathname === '/job-placement' ? 'active' : ''}>
                                             Job Placement
                                             <span className="ml-1 whitespace-nowrap rounded bg-gradient-to-r from-[#ef4444] to-[#f97316] px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">
                                                 New
                                             </span>
+                                        </Link>
+                                        <Link href="/marketing" className={router.pathname === '/marketing' ? 'active' : ''}>
+                                            Sales Marketing
+                                        </Link>
+                                        <Link href="/modern-saas" className={router.pathname === '/modern-saas' ? 'active' : ''}>
+                                            Modern Saas
+                                        </Link>
+                                        <Link href="/nft" className={router.pathname === '/nft' ? 'active' : ''}>
+                                            NFT Marketplace
+                                        </Link>
+                                        <Link href="/online-courses" className={router.pathname === '/online-courses' ? 'active' : ''}>
+                                            Online Courses
                                         </Link>
                                         <Link href="/online-payments" className={router.pathname === '/online-payments' ? 'active' : ''}>
                                             Online Payments
@@ -171,11 +159,20 @@ const Header = (props: any) => {
                                                 New
                                             </span>
                                         </Link>
+                                        <Link href="/photography" className={router.pathname === '/photography' ? 'active' : ''}>
+                                            Photography
+                                        </Link>
                                         <Link href="/portfolio-landing" className={router.pathname === '/portfolio-landing' ? 'active' : ''}>
                                             Portfolio
                                             <span className="ml-1 whitespace-nowrap rounded bg-gradient-to-r from-[#ef4444] to-[#f97316] px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">
                                                 New
                                             </span>
+                                        </Link>
+                                        <Link href="/real-estate" className={router.pathname === '/real-estate' ? 'active' : ''}>
+                                            Real Estate
+                                        </Link>
+                                        <Link href="/restaurant" className={router.pathname === '/restaurant' ? 'active' : ''}>
+                                            Restaurant
                                         </Link>
                                     </div>
                                 </li>
