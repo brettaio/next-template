@@ -4,6 +4,28 @@ import { useState, useEffect } from 'react';
 import CounterComponent from '../components/CounterComponent';
 import Link from 'next/link';
 import Image from 'next/image';
+import applicationExample from '../public/assets/images/application-example.png';
+import blogExample from '../public/assets/images/blog-example.png';
+import consultingExample from '../public/assets/images/consulting-example.png';
+import constructionExample from '../public/assets/images/construction-example.png';
+import creativeAgencyExample from '../public/assets/images/creative-agency-example.png';
+import cryptoCurrencyExample from '../public/assets/images/crypto-currency-example.png';
+import eventConcertExample from '../public/assets/images/concert-example.png';
+import gymExample from '../public/assets/images/gym-example.png';
+import healthCareExample from '../public/assets/images/health-care-example.png';
+import hotelResortExample from '../public/assets/images/hotel-resort-example.png';
+import insuranceExample from '../public/assets/images/insurance-example.png';
+import jobPlacementExample from '../public/assets/images/job-placement-example.png';
+import salesMarketingExample from '../public/assets/images/sales-marketing-example.png';
+import modernSaasExample from '../public/assets/images/modern-saas-example.png';
+import nftMarketplaceExample from '../public/assets/images/nft-marketplace-example.png';
+import onlineCoursesExample from '../public/assets/images/online-courses-example.png';
+import onlinePaymentsExample from '../public/assets/images/online-payments-example.png';
+import personalPortfolioExample from '../public/assets/images/personal-portfolio-example.png';
+import photographyExample from '../public/assets/images/photography-example.png';
+import portfolioExample from '../public/assets/images/portfolio-example.png';
+import realEstateExample from '../public/assets/images/real-estate-example.png';
+import restaurantExample from '../public/assets/images/restaurant-example.png';
 
 const Index = () => {
     const [activeTab, setActiveTab] = useState<string>('all');
@@ -21,6 +43,16 @@ const Index = () => {
     const why3 = `I'm content in content. I have design, UX UI and content writing background, I also have that primary teaching degree to aid in my story telling. I also have this sick as digital friend called Alan Iverson - Well I call him AI for short. I cover the entire spectrum of digital marketing and branding to fill in the gaps that are needed. Fresh content. Fast Content.`;
     const why4 = `I take pride in the friends I've made and the true ones that I stay in constant connect with. Shopify experts, UXUI Gurus, Fullstack Devs, Entreprenuers, Cyber Security Leaders. All these people enrich my life with goodness and they're always one call away. I appreciate them dearly for the opportunites they have provided in my journey. You know who you are. Thank you!`;
 
+    const whyH6 = `A little more goodness to get you over the line`;
+    const whyH4 = `We bring solutions to make life easier for our customers.`;
+    const why5 = `I am able to connect traditional, feet on the ground, tangible marketing with digital campaigns and strategy. A conduit between actuality and online simplicity. I see what you can't and use what you can.`;
+    const why6 = `Continual feedback & analyses allow me to effectively & efficiently realign our approach to be ready to succeed at a moments notice.`;
+    const why7 = `Encompassing a holistic, multi-faceted approach is a must in Google Ads Marketing. Remarketing to traffic and constantly showing to turn leads into sales and push your business into a winning space.`;
+    const why8 = `I'm here, ready, when you're not. Quick, attentive & responsive, just like your website should be. Only one call away as your digital marketing manager and educator.`;
+
+    const landingPagesH6 = `Not all websites are created equally`;
+    const landingPagesH4 = `A landing page that is guaranteed to convert is essential to Google Ad success.`;
+    const landingPagesP = `I'm not saying you need a new website, I'm saying your ads need their own website. Built in a modern framework, mobile responsive and super fast. Breakneck Speeds.`;
     return (
         <div className="overflow-x-hidden">
             <div className="overflow-hidden bg-black pt-[82px] sm:-mx-[250px] sm:rounded-b-[50%] lg:-mx-[150px] lg:pt-[106px]">
@@ -279,8 +311,8 @@ const Index = () => {
                         <div className="items-end gap-4 lg:flex xl:gap-0">
                             <div className="lg:w-1/2">
                                 <div className="heading mb-16 text-center lg:text-left">
-                                    <h6>What Makes us Different?</h6>
-                                    <h4 className="leading-normal !text-white lg:!leading-[50px]">We bring solutions to make life easier for our customers.</h4>
+                                    <h6>{whyH6}</h6>
+                                    <h4 className="leading-normal !text-white lg:!leading-[50px]">{whyH4}</h4>
                                 </div>
                                 <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2" data-aos="fade-right" data-aos-duration="1000">
                                     <div className="flex transition">
@@ -305,8 +337,8 @@ const Index = () => {
                                             </svg>
                                         </div>
                                         <div className="pl-3">
-                                            <h4 className="mb-2 text-lg font-bold text-white">Creativity</h4>
-                                            <p className="font-semibold">Curabitur blandit lacus porttitor ridiculus mus.</p>
+                                            <h4 className="mb-2 text-lg font-bold text-white">Outside The Box Creativity</h4>
+                                            <p className="font-semibold">{why5}</p>
                                         </div>
                                     </div>
                                     <div className="flex transition">
@@ -378,8 +410,8 @@ const Index = () => {
                                             </svg>
                                         </div>
                                         <div className="pl-3">
-                                            <h4 className="mb-2 text-lg font-bold text-white">Innovative Thinking</h4>
-                                            <p className="font-semibold">There are many variations of passages of Lorem Ipsum available</p>
+                                            <h4 className="mb-2 text-lg font-bold text-white">Thinking Informs Action</h4>
+                                            <p className="font-semibold">{why6}</p>
                                         </div>
                                     </div>
                                     <div className="flex transition">
@@ -414,8 +446,8 @@ const Index = () => {
                                             </svg>
                                         </div>
                                         <div className="pl-3">
-                                            <h4 className="mb-2 text-lg font-bold text-white">Rapid Solutions</h4>
-                                            <p className="font-semibold">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                            <h4 className="mb-2 text-lg font-bold text-white">Multiple Possiblities & Solutions</h4>
+                                            <p className="font-semibold">{why7}</p>
                                         </div>
                                     </div>
                                     <div className="flex transition">
@@ -440,10 +472,8 @@ const Index = () => {
                                             </svg>
                                         </div>
                                         <div className="pl-3">
-                                            <h4 className="mb-2 text-lg font-bold text-white">Top-Notch Support</h4>
-                                            <p className="font-semibold">
-                                                It has survived not only five centuries, but also the leap into electronic typesetting
-                                            </p>
+                                            <h4 className="mb-2 text-lg font-bold text-white">24/7 Personal Support</h4>
+                                            <p className="font-semibold">{why8}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -457,8 +487,9 @@ const Index = () => {
                 <div className="container">
                     <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between">
                         <div className="heading text-center lg:text-left">
-                            <h6>Our Project</h6>
-                            <h4>Some of our finest work.</h4>
+                            <h6>{landingPagesH6}</h6>
+                            <h4>{landingPagesH4}</h4>
+                            <p className="mt-4 font-bold">{landingPagesP}</p>
                         </div>
                         {/* <div className="flex items-center justify-end gap-4">
                             <div className="text-sm font-extrabold text-black ">View All</div>
@@ -475,7 +506,7 @@ const Index = () => {
                         </div> */}
                     </div>
                     <div className="mb-7">
-                        <ul className="filters home-filter mt-10 flex gap-8 overflow-x-auto whitespace-nowrap pb-3 font-bold lg:mt-0 lg:gap-10">
+                        {/* <ul className="filters home-filter mt-10 flex gap-8 overflow-x-auto whitespace-nowrap pb-3 font-bold lg:mt-0 lg:gap-10">
                             <li className={`filter ${activeTab === 'all' ? 'active' : ''}`}>
                                 <button type="button" onClick={() => setActiveTab('all')} className="transition hover:text-secondary">
                                     All Work
@@ -506,22 +537,16 @@ const Index = () => {
                                     Ecommerce
                                 </button>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div className="projects grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         <div className={`project ${activeTab === 'all' || activeTab === 'web' ? 'block' : 'hidden'}`}>
                             <div className="relative rounded-3xl border border-transparent bg-white drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] transition duration-500 hover:border-secondary hover:bg-secondary/20 ">
-                                <Link href="/portfolio-detail" className="absolute top-0 left-0 h-full w-full"></Link>
-                                <Image
-                                    src="/assets/images/project-1.png"
-                                    height={256}
-                                    width={256}
-                                    alt="project-1"
-                                    className="h-52 w-full rounded-t-3xl object-cover"
-                                />
+                                <Link href="/application" className="absolute top-0 left-0 h-full w-full"></Link>
+                                <Image src={applicationExample} height={256} width={256} alt="project-1" className="h-52 w-full rounded-t-3xl object-cover" />
                                 <div className="p-5 text-sm font-bold">
-                                    <h6 className="mb-1 text-black ">Space Landing page</h6>
-                                    <p>Website</p>
+                                    <h6 className="mb-1 text-black ">Application Landing page</h6>
+                                    <p>Digital Product</p>
                                 </div>
                             </div>
                         </div>
