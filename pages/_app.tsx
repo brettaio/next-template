@@ -1,13 +1,34 @@
-import '../styles/tailwind.css';
-import type { AppProps } from 'next/app';
-import { Suspense } from 'react';
-import DefaultLayout from '../components/Layouts/DefaultLayout';
-
+// _app.tsx
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { sendGTMEvent } from '@next/third-parties/google';
 import { Provider } from 'react-redux';
 import store from '../store/index';
 import Head from 'next/head';
+import { AppProps } from 'next/app';
+import { Suspense } from 'react';
+import DefaultLayout from '../components/Layouts/DefaultLayout';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+
+    useEffect(() => {
+        // Trigger a pageLoaded event on component mount
+        sendGTMEvent({ event: 'pageLoaded', pagePath: router.pathname });
+
+        // Add event listener for route changes to trigger a pageView event
+        const handleRouteChange = (url: string) => {
+            sendGTMEvent({ event: 'pageView', pagePath: url });
+        };
+
+        router.events.on('routeChangeComplete', handleRouteChange);
+
+        // Remove event listener on component unmount
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, [router.events, router.pathname]); // Dependency on router.pathname ensures the effect runs when the route changes
+
     return (
         <Provider store={store}>
             <Suspense>
@@ -24,3 +45,5 @@ export default function App({ Component, pageProps }: AppProps) {
         </Provider>
     );
 }
+
+export default App;
