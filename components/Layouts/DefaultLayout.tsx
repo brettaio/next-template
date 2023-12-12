@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import App from '../../App';
 import Footer from './Footer';
 import Header from './Header';
-import { GoogleTagManager } from '@next/third-parties/dist/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const DefaultLayout = ({ children }: PropsWithChildren) => {
     const [showLoader, setShowLoader] = useState(true);

@@ -15,9 +15,7 @@
         "jsx": "preserve",
         "incremental": true,
         "baseUrl": ".",
-        "paths": {
-            "@next/third-parties/google": ["node_modules/@next/third-parties/google"]
-        }
+        "paths": { "@next/third-parties/google": ["./node_modules/@next/third-parties/dist/google"] }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]
