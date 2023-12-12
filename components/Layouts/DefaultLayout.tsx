@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import App from '../../App';
 import Footer from './Footer';
 import Header from './Header';
+import { GoogleTagManager } from '@next/third-parties/dist/google';
 
 const DefaultLayout = ({ children }: PropsWithChildren) => {
     const [showLoader, setShowLoader] = useState(true);
@@ -46,6 +47,11 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
 
     return (
         <App>
+            {/* Google Tag Manager */}
+            <GoogleTagManager
+                gtmId="
+GTM-KPK8837Q"
+            />
             {/* BEGIN MAIN CONTAINER */}
             <div>
                 {/* screen loader  */}
